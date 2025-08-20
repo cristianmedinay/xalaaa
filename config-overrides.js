@@ -8,7 +8,6 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 // our packages that will now be included in the CRA build step
 const appIncludes = [
   resolveApp("src"),
-  resolveApp("../common/src"),
 ];
 
 module.exports = function override(config, env) {
