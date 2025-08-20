@@ -8,11 +8,11 @@ import { TimeHelper } from "../../../helpers";
 import { IMediaModel } from "../../../models";
 
 const DEFAULT_DATASET_ID =
-  process.env.REACT_APP_KONODRAC_ANALYTICS_DATASETID || "";
+  import.meta.env.VITE_KONODRAC_ANALYTICS_DATASETID || "";
 const DEFAULT_CHANNEL_NAME =
-  process.env.REACT_APP_KONODRAC_DEFAULT_CHANNEL_NAME || "";
+  import.meta.env.VITE_KONODRAC_DEFAULT_CHANNEL_NAME || "";
 const DEFAULT_CHANNEL_ID =
-  process.env.REACT_APP_KONODRAC_DEFAULT_CHANNELID || "";
+  import.meta.env.VITE_KONODRAC_DEFAULT_CHANNELID || "";
 
 type PlayerMediaMetadata = {
   datasetId: string;

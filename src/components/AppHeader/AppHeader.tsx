@@ -47,8 +47,8 @@ export interface IAppHeaderProps {
   visibility?: AppHeaderVisibility;
 }
 
-const showSearch = process.env.REACT_APP_SEARCH_NAVIGATION === "true";
-const showMyList = process.env.REACT_APP_MY_LIST_NAVIGATION === "true";
+const showSearch = import.meta.env.VITE_SEARCH_NAVIGATION === "true";
+const showMyList = import.meta.env.VITE_MY_LIST_NAVIGATION === "true";
 
 export const AppHeader: React.FC<IAppHeaderProps> = ({
   configuration,

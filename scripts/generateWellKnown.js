@@ -8,10 +8,10 @@ const fs = require('fs');
 const path = require('path');
 
 const PUBLIC_PATH = path.resolve(__dirname, '../public/.well-known');
-const ANDROID_PACKAGE_NAME = process.env.REACT_APP_ANDROID_PACKAGE_NAME;
-const SIGNING_KEY_SHA256 = process.env.REACT_APP_SIGNING_KEY_SHA256;
-const APP_IDENTIFIER_PREFIX = process.env.REACT_APP_APPLICATION_IDENTIFIER_PREFIX;
-const BUNDLE_IDENTIFIER = process.env.REACT_APP_BUNDLE_IDENTIFIER;
+const ANDROID_PACKAGE_NAME = process.env.VITE_ANDROID_PACKAGE_NAME;
+const SIGNING_KEY_SHA256 = process.env.VITE_SIGNING_KEY_SHA256;
+const APP_IDENTIFIER_PREFIX = process.env.VITE_APPLICATION_IDENTIFIER_PREFIX;
+const BUNDLE_IDENTIFIER = process.env.VITE_BUNDLE_IDENTIFIER;
 
 fs.mkdirSync(PUBLIC_PATH, { recursive: true });
 

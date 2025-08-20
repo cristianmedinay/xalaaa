@@ -44,7 +44,7 @@ interface useKonodracEventsParams {
 }
 
 const DOMAIN =
-  process.env.REACT_APP_ANALYTICS_DOMAIN || AppConfig.AnalyticsDomain || "";
+  import.meta.env.VITE_ANALYTICS_DOMAIN || AppConfig.AnalyticsDomain || "";
 
 export const useKonodracEvents = (
   params: useKonodracEventsParams
