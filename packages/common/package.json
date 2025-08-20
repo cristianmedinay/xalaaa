@@ -6,7 +6,7 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint ./src --quiet",
-    "add:header": "eslint --rule 'header/header: [2, \"../../config/header.js\"]' --fix ./src",
+    "add:header": "eslint --rule 'header/header: [2, \"./config/header.js\"]' --fix ./src",
     "compile": "tsc -b --incremental"
   },
   "peerDependencies": {

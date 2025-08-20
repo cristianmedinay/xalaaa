@@ -1,5 +1,5 @@
 const path = require("path");
-const getHeaderPath = require("./config/eslint.helpers.js");
+const getHeaderPath = require("./packages/common/config/eslint.helpers.js");
 
 module.exports = {
   root: true,
