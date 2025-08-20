@@ -30,6 +30,6 @@ module.exports = {
   rules: {
     "react-hooks/exhaustive-deps": "off",
     "react/prop-types": "off",
-    "header/header": [2, path.resolve(__dirname, "../../config/header.js")],
+    "header/header": [2, path.resolve(__dirname, "./config/header.js")],
   },
 };

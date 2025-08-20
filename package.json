@@ -11,7 +11,7 @@
     "ios": "yarn workspace mobile ios",
     "studio": "yarn workspace mobile studio",
     "xcode": "yarn workspace mobile xcode",
-    "clean": "node scripts/clean.js",
+    "clean": "node packages/common/scripts/clean.js",
     "compile:common": "tsc -b ./packages/common",
     "compile:web": "tsc -b ./packages/web",
     "compile:smarttv": "tsc -b ./packages/smarttv",
