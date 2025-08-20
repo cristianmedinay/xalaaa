@@ -31,8 +31,6 @@ import {
 } from "history";
 import "intersection-observer";
 import React, { useEffect } from "react";
-import "react-app-polyfill/ie11";
-import "react-app-polyfill/stable";
 import { render } from "react-dom";
 import { Provider, ReactReduxContext } from "react-redux";
 import { createLogger } from "redux-logger";
@@ -49,14 +47,14 @@ DataProvider.initHttpFactory();
 
 const browserHistoryOptions: BrowserHistoryBuildOptions = {};
 
-if (process.env.PUBLIC_URL) {
-  browserHistoryOptions.basename = process.env.PUBLIC_URL;
+if (import.meta.env.BASE_URL) {
+  browserHistoryOptions.basename = import.meta.env.BASE_URL;
 }
 
 const appHistory: History<any> = createBrowserHistory(browserHistoryOptions);
 const middlewares = [];
 
-if (process.env.NODE_ENV === "development") {
+if (import.meta.env.DEV) {
   middlewares.push(createLogger({ diff: true, collapsed: true }));
 }
 const reduxStoreConfigurator = new ReduxStoreConfigurator(
@@ -82,10 +80,7 @@ function InitApp() {
 /**
  * used to show components that just been refreshed
  */
-if (
-  process.env.NODE_ENV === "development" &&
-  process.env.REACT_APP_OPTIMIZATION === "true"
-) {
+if (import.meta.env.DEV && import.meta.env.VITE_OPTIMIZATION === "true") {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const whyDidYouRender = require("@welldone-software/why-did-you-render");
   whyDidYouRender(React);

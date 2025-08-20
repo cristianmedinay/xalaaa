@@ -4,7 +4,11 @@
     "baseUrl": "./src",
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "typeRoots": ["@types", "node_modules/@types"]
+    "typeRoots": ["@types", "node_modules/@types"],
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src", "@types/index.d.ts"],
   "exclude": ["node_modules", "public"]

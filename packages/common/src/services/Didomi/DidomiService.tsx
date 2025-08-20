@@ -19,7 +19,7 @@ import {
   updateFirebaseConsent,
 } from "../../helpers/firebaseConfig";
 
-const DIDOMI_API_KEY = process.env.REACT_APP_DIDOMI_API_KEY || "";
+const DIDOMI_API_KEY = import.meta.env.VITE_DIDOMI_API_KEY || "";
 const DIDOMI_LOADER_SCRIPT_ID = "spcloader";
 const DIDOMI_HOST_ID = "didomi-host";
 
