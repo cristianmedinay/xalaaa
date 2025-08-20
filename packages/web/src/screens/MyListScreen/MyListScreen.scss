@@ -1,0 +1,23 @@
+@import "src/sass/utils";
+
+.MyListScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__loader {
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+    flex: 1;
+    padding-left: var(--app-padding-left);
+    padding-right: var(--app-padding-right);
+
+    .CategoryPicker {
+      @include half-size('margin-bottom');
+    }
+  }
+}

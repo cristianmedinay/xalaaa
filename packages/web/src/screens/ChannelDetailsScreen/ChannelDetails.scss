@@ -1,0 +1,74 @@
+@import "../MediaDetailsScreen/DetailsScreenSharedStyles.scss";
+
+.ChannelDetails {
+  &__info-container {
+    @extend %info-container;
+    position:relative;
+
+    & > .mute-button {
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+      border: none;
+      background-color: white;
+      color: black;
+      font-size: 28px;
+
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: $tablet-max-width) {
+        display: none;
+      }
+
+      &> .MediaButton__icon {
+        padding: 0;
+        margin: 0;
+        width: auto;
+      }
+    }
+  }
+
+  &__info {
+    @extend %info;
+  }
+
+  &__main-info {
+    @extend %main-info;
+  }
+
+  &__genres {
+    @extend %genres;
+  }
+
+  &__title {
+    @extend %title;
+    margin: 0;
+  }
+
+  &__description {
+    @extend %description;
+    margin: 0;
+  }
+
+  &__TVshowTime {
+    @extend %description;
+    margin: 0;
+  }
+
+  &__actions {
+    @extend %actions;
+  }
+
+  &__programs {
+    margin: 0 var(--app-padding-left);
+
+    &_title {
+      @include text-style('half', 'bolder');
+      text-shadow: $text-shadow;
+    }
+  }
+}

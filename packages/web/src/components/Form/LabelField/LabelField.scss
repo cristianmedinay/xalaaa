@@ -1,0 +1,82 @@
+@import "src/sass/variables";
+@import "src/sass/utils";
+
+.LabelField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .Label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-text-color-d-30);
+  }
+
+  label {
+    font-size: $label-font-size;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+
+    @include phone {
+      font-size: 14px;
+    }
+  }
+
+  .required {
+    color: var(--primary-color);
+  }
+
+  .Error {
+    font-size: 12px;
+    color: $error-color;
+    list-style: none;
+    margin-top: -46px;
+    margin-bottom: 0px;
+    min-height: 45px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .FormInput {
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+    border-bottom: 2px solid #a3a3a3;
+
+    @include phone {
+      height: 40px;
+    }
+  }
+
+  .FormInputError {
+    @extend .FormInput;
+    border-bottom: 2px solid $error-color;
+  }
+
+  .Input__input {
+    color: var(--primary-text-color);
+    font-size: $input-font-size;
+    font-size: 20px;
+    color: var(--primary-text-color);
+
+    @include phone {
+      font-size: 14px;
+    }
+  }
+
+  &__active {
+    .Label {
+      color: var(--primary-color);
+    }
+
+    .FormInput, .FormInputError {
+      border-bottom: 2px solid var(--primary-color);
+    }
+  }
+}

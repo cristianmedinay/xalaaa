@@ -1,0 +1,12 @@
+.brightcove-react-player-loader {
+  height: 100%;
+  width: 100%;
+}
+
+.MediaDetails__background {
+  .video-js {
+    div, .vjs-big-play-button {
+      display: none !important;
+    }
+  }
+}

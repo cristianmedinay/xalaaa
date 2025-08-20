@@ -1,0 +1,10 @@
+{
+  "branches": [
+    {
+      "name": "main"
+    }
+  ],
+  "noCi": true,
+  "debug": true,
+  "dryRun": false
+}

@@ -1,0 +1,45 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.ListComponentItemSquare {
+  position: relative;
+  transition: all 0.2s;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  background-color: var(--cell-background-color);
+  cursor: pointer;
+
+  &-container {
+    position: relative;
+    margin: 0 12px;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+
+    &--skeleton {
+      background: var(--cell-background-color);
+    }
+  }
+
+  &-image-container {
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    height: 100%;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+
+  &-skeleton {
+    position: absolute;
+    width: 100%;
+    bottom: 26px;
+    left: 20px;
+  }
+}

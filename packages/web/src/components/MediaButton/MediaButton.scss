@@ -1,0 +1,166 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.MediaButton {
+  @include prevent-tab-highlights;
+  font-weight: 400;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  height: $button-height-default;
+  font-size: $button-height-default;
+  font-family: var(--font-family);
+  object-fit: contain;
+  border-radius: 27px;
+  color: var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  vertical-align: middle;
+  outline: none;
+  transform: scale(0.95);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__icon,
+  &__LoaderSpinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $button-height-default;
+    height: $button-height-default;
+    transform: translate(-1px, 1px);
+
+    + .MediaButton__text {
+      padding-left: 0;
+    }
+
+    svg {
+      opacity: 1;
+      filter: $icon-shadow;
+    }
+  }
+
+  &__icon--elevated {
+    + .MediaButton__text {
+      padding-left: 10px;
+    }
+  }
+
+  &__text {
+    padding: 0 1em;
+    font-size: 18px;
+    margin-left: 4px;
+  }
+
+  &--primary {
+    border: none;
+
+    .MediaButton__LoaderSpinner {
+      svg {
+        circle {
+          stroke: var(--primary-text-color);
+        }
+      }
+    }
+  }
+
+  &--secondary {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+  }
+
+  &--link {
+    border-color: var(--link-color);
+    background-color: var(--link-color);
+  }
+
+  &--transparent {
+    border: none;
+  }
+
+  &--disabled {
+    border-color: #5a5a5a;
+    background-color: #5a5a5a;
+    color: #8f8f8f;
+    cursor: not-allowed;
+  }
+
+  &--loading {
+    opacity: 0.6;
+  }
+
+  &--icon {
+    border: none;
+  }
+
+  &--Mute {
+    float: left;
+  }
+}
+
+@include phone {
+  .MediaButton {
+    height: $button-height-sm;
+
+    &__icon {
+      width: $button-height-sm;
+      height: $button-height-sm;
+
+      &--trailer {
+        width: 45px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .MediaButton {
+    height: $button-height-md;
+
+    &__icon {
+      width: $button-height-md;
+      height: $button-height-md;
+
+      &--trailer {
+        width: 60px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .MediaButton {
+    height: $button-height-md;
+
+    &__icon {
+      width: $button-height-md;
+      height: $button-height-md;
+
+      &--trailer {
+        width: 60px;
+      }
+    }
+  }
+}
+
+@include large {
+  .MediaButton {
+    height: $button-height-md;
+
+    &__icon {
+      width: $button-height-md;
+      height: $button-height-md;
+
+      &--trailer {
+        width: 60px;
+      }
+    }
+  }
+}

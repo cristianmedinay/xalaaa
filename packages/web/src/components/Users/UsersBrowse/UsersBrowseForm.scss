@@ -1,0 +1,106 @@
+.BrowseUsersForm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .SelectedUser {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        min-height: 100px;
+        margin-bottom: 16px;
+        cursor: pointer;
+        .SelectedUserItem {
+            border: solid 1px rgba(255, 255, 255, 0.5);
+            border-radius: 40px;
+            padding: 16px;
+        }
+    }
+    .SearchField {
+        position: relative;
+        min-width: 200px;
+        border: solid 1px rgba(255, 255, 255, 0.22);
+        border-radius: 30px;
+        display: inline-block;
+        width: 100%;
+        input {
+            cursor: pointer;
+            padding: 8px 8px;
+            background-color: rgba(0,0,0,0);
+            border: none;
+            border-radius: 30px;
+            // color: $select-color;
+            font-size: 1.25rem;
+            letter-spacing: 0.9px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 50%);
+            width: calc(100% - (32px + 2*4px));
+            color: var(--primary-text-color);
+        }
+        input:focus {
+            outline: none;
+        }
+
+        .SearchIcon {
+            position: absolute;
+            display: flex;
+            padding-right: 4px;
+            right: 0;
+            top: 0;
+            pointer-events: none;
+    
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            svg {
+                display: block;
+                height: 50%;
+                width: 32px;
+                fill: var(--primary-color);
+            }
+        }
+        
+    }
+    .SearchUsersList {
+        list-style-type: none;
+        margin: 0;
+        padding: 8px;
+        margin-top: 16px;
+        height: 30vh;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        align-items: center;
+        cursor: pointer;
+        .UserListItem {
+            width: 90%;
+            border-radius: 40px;
+            padding: 8px;
+            cursor: pointer;
+            .UserInList {
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        .UserListItem:hover {
+            background-color: rgba(255, 255, 255, 0.22);
+        }
+    }
+
+    .BrowseUsersFormActions {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .Confirm {
+            font-size: 1.25rem;
+            margin-right: 0;
+        }
+
+        .Cancel {
+            font-size: 1.25rem;
+
+        }
+    }
+}

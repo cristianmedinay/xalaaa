@@ -1,0 +1,98 @@
+@import "../MediaDetailsScreen/DetailsScreenSharedStyles.scss";
+
+.MovieDetails {
+  &__info-container {
+    @extend %info-container;
+    position:relative;
+
+    & > .mute-button {
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+      border: none;
+      background-color: white;
+      color: black;
+      font-size: 28px;
+
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: $tablet-max-width) {
+        display: none;
+      }
+
+      &> .MediaButton__icon {
+        padding: 0;
+        margin: 0;
+        width: auto;
+      }
+    }
+  }
+
+  &__info {
+    @extend %info;
+
+    & .label {
+      margin-left: 7px;
+    }
+
+    & * + .label {
+      @include main-size('margin-left');
+    }
+  }
+
+  &__main-info {
+    @extend %main-info;
+  }
+
+  &__genres {
+    @extend %genres;
+  }
+
+  &__parentTitle {
+    @extend %parentTitle;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  .MediaEpisodeInfo {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+
+  &__actions {
+    @extend %actions;
+  }
+
+  &__details {
+    &-container {
+      @extend %details-container;
+    }
+
+    &__description,
+    &__people {
+      @extend %details;
+
+      &-header {
+        @extend %details-header;
+      }
+
+      &-text {
+        @extend %details-text;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .MediaAvailabilityDate {
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 0.68px;
+  }
+}

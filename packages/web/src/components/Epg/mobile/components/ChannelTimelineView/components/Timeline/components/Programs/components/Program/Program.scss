@@ -1,0 +1,47 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-mobile-program {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  padding: 2px 0;
+
+  &-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 15px 25px;
+
+    background: $background-secondary-color;
+    color: $text-color;
+
+    &:hover {
+      cursor: pointer;
+      background: $active-color;
+    }
+
+    &-metadata {
+      p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+
+        @include line-clamp-ellipsis(1);
+        @include ellipsis();
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+
+}

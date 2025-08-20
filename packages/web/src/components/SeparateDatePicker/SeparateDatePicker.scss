@@ -1,0 +1,50 @@
+@import "src/sass/utils";
+
+.SeparateDatePicker {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  gap: 25px;
+
+  &__label {
+    font-size: 20px;
+    color: var(--primary-text-color-d-30);
+
+    @include phone {
+      font-size: 14px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 25px;
+    
+    @include phone {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .InputSelect-selector {
+      padding-right: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding-right: 25px;
+    min-width: 100px;
+
+    &_day {
+      min-width: 100px;
+
+      @include phone {
+        min-width: 100%;
+      }
+    }
+
+    &_month {
+      min-width: 140px;
+    }
+  }
+}

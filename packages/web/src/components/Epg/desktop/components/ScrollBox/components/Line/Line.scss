@@ -1,0 +1,26 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-desktop-line {
+  position: absolute;
+  z-index: 12;
+  top: 59px;
+  width: $epg-time-marker-height;
+  pointer-events: none;
+  background: $active-color;
+
+  margin-left: $epg-desktop-sidebar-width;
+
+  @include largeDown() {
+    margin-left: $epg-desktop-sidebar-width-tablet;
+    top: 32px;
+  }
+}
+
+.fixed-epg-elements .epg-desktop-line {
+  top: -25px;
+
+  @include largeDown() {
+    top: -12px;
+  }
+}

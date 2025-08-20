@@ -1,0 +1,54 @@
+@import "../MediaDetailsScreen/DetailsScreenSharedStyles.scss";
+
+.PackageDetails {
+  &__info-container {
+    @extend %info-container;
+  }
+  &__info {
+    @extend %info;
+  }
+
+  &__type {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    opacity: 0.87;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.01;
+    text-transform: uppercase;
+  }
+
+  &__actions {
+    display: flex;
+    font-size: 1rem;
+    letter-spacing: 0.0375rem;
+    margin: 0 0 44px;
+
+    @include tabletDown {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__description {
+    @extend %responsive-padding;
+    @extend %details-text;
+    opacity: 0.87;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__list--title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 34px;
+    letter-spacing: 0.9px;
+  }
+
+  &__list-container {
+    @extend %responsive-padding;
+  }
+}

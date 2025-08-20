@@ -1,0 +1,52 @@
+@import "src/sass/utils";
+
+.HeaderBurgerMenu {
+
+  @include desktopDown {
+    margin-right: 22px;
+  }
+
+  @include phone {
+    margin-right: 0;
+  }
+
+  .Menu:not(.Menu-horizontal) .Menu-item-selected {
+    background-color: transparent;
+  }
+
+  .Menu {
+    &:not(&-horizontal) &-item-selected {
+      background-color: transparent;
+    }
+    &-item:active,
+    &-submenu-title:active {
+      background: transparent;
+    }
+  }
+
+  &.dd-wrapper {
+    background-color: transparent;
+    opacity: 1;
+    user-select: none;
+  
+    .dd-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .circular {
+        margin-left: 19px;
+        
+        @include desktopDown {
+          margin: 0;
+        }
+      }
+  
+      .circular, .circular svg {
+        width: 23px;
+        height: 23px;
+        filter: $icon-shadow;
+      }
+    }
+  }  
+}

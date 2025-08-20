@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="87px" viewBox="0 0 53 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>ic_arrow_left_focus</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M41.3626483,75.3699658 C39.8886348,76.7018147 37.610607,76.7018147 36.1365935,75.3699658 L1.70432118,41.1471009 C1.03431435,40.4811688 0.632352941,39.6820519 0.632352941,38.7497274 L0.632352941,38.3501727 C0.632352941,37.4178481 1.03435246,36.6187236 1.70432118,35.9527992 L36.1365935,1.72993426 C37.610607,0.2648853 39.8886348,0.2648853 41.3626483,1.72993426 C42.7026467,3.19498323 42.7026467,5.45915669 41.3626483,6.79100561 L9.47651016,38.4832212 L41.3626483,70.1754368 C42.7026467,71.6404857 42.7026467,73.9046592 41.3626483,75.3697082 L41.3626483,75.3699658 Z" id="path-1"></path>
+        <filter x="-24.0%" y="-10.6%" width="147.9%" height="126.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-53.000000, -738.000000)" fill-rule="nonzero">
+            <g id="ic_arrow_left_focus" transform="translate(58.000000, 741.000000)">
+                <g id="Path">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

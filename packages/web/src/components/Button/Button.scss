@@ -1,0 +1,63 @@
+@import "src/sass/variables";
+
+.Btn {
+  background-color: $secondary-bg;
+  cursor: pointer;
+  border: none;
+  font-size: 1.25rem;
+  height: 80px;
+  padding: 2px 15px;
+  box-shadow: black 0 3px 10px;
+  border-radius: 5px;
+  outline: none;
+  color: var(--primary-text-color);
+  font-family: var(--font-family);
+
+  &:not(:disabled):not(.disabled):hover,
+  &:not(:disabled):not(.disabled):active {
+    outline: none;
+    background-color: $primary-bg;
+  }
+
+  &:disabled,
+  .disabled {
+    cursor: not-allowed;
+    background-color: $disabled;
+    opacity: 0.7;
+  }
+
+  &:disabled:active,
+  &:disabled:hover,
+  .disabled:active,
+  .disabled:hover {
+    opacity: 1;
+  }
+
+  &:disabled:hover,
+  &:disabled:active,
+  .disabled:hover,
+  .disabled:active {
+    background-color: $disabled;
+  }
+}
+
+.Button-container {
+  text-align: center;
+  padding: 35px 0;
+}
+
+.Button-container--button--active {
+  outline: none;
+  background-color: $primary-bg;
+
+  &:disabled,
+  .disabled {
+    opacity: 1;
+  }
+}
+
+@media #{$screen-resolution-tv-small} {
+  .Button-container {
+    padding: 22px 0;
+  }
+}

@@ -1,0 +1,14 @@
+@import "src/sass/utils";
+
+.HeaderLogo {
+  display: flex;
+
+  &__image {
+    max-width: 170px;
+    filter: $icon-shadow;
+
+    @include phone {
+      height: 38px;
+    }
+  }
+}

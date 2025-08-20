@@ -1,0 +1,35 @@
+@import "src/sass/variables";
+
+.PillList {
+  margin-top: 50px;
+
+  .Label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    label {
+      font-size: $label-font-size;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  .list-of-pills {
+    padding: 8px 0 8px 0;
+    margin: 0;
+    display: flex;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    .add-button {
+      padding: 2px;
+      font-size: 1.6rem;
+
+      svg {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+@import "../Pill/Pill.scss";

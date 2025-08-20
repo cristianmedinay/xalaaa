@@ -1,0 +1,9 @@
+.LanguageSelector {
+  .InputSelect__container {
+    width: 150px;
+  }
+
+  & label {
+    display: none;
+  }
+}

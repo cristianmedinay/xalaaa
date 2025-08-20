@@ -1,0 +1,202 @@
+@import "src/sass/utils";
+
+@mixin base-size {
+  width: 100%;
+  min-height: 54px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.InputSelect {
+  @include base-size;
+  flex-wrap: nowrap;
+  position: relative;
+  border-bottom: 1px solid var(--primary-text-color);
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  caret-color: transparent;
+
+  &__container {
+    position: relative;
+    width: 100%;
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &-open {
+    background-color: var(--cell-background-color);
+    padding-left: 2px;
+  }
+
+  @include phone {
+    min-height: unset;
+    height: 38px;
+  }
+}
+
+.InputSelect-selection {
+  &-search {
+    @include base-size;
+    position: absolute;
+    padding-right: 40px;
+
+    &-input {
+      @include base-size;
+      background-color: transparent;
+      color: white;
+      border: none;
+      outline: none;
+      overflow: hidden;
+      padding: 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+
+  &-search,
+  &-search-input,
+  &-item {
+    @include phone {
+      min-height: unset;
+      height: 38px;
+      font-size: 14px;
+    }
+  }
+}
+
+.InputSelect__dropdown {
+  height: 400px !important;
+}
+
+.rc-virtual-list-holder {
+  height: 400px;
+}
+
+.InputSelect-selection-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  width: auto;
+  overflow: hidden;
+  pointer-events: none;
+  margin-left: 6px;
+}
+
+.InputSelect-selection-placeholder {
+  position: absolute;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 6px;
+  width: calc(100% - 36px);
+
+  @include phone {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+.InputSelect-show-arrow .InputSelect-arrow {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+
+  div {
+    height: 100%;
+  }
+
+  svg {
+    transition: transform 0.2s;
+    display: block;
+    height: 100%;
+    width: 32px;
+    color: white;
+
+    @include phone {
+      width: 24px;
+    }
+  }
+}
+
+.InputSelect-open {
+  border-bottom: 2px solid grey;
+}
+
+.InputSelect-open .InputSelect-arrow {
+  svg {
+    transform: rotate(-0.5turn);
+  }
+}
+
+.InputSelect-dropdown {
+  box-sizing: border-box;
+  background-color: black;
+  width: fit-content !important;
+
+  &-hidden {
+    display: none;
+  }
+}
+
+.InputSelect-item {
+  padding: 22px 26px;
+  cursor: pointer;
+  font-size: 16px;
+  overflow-x: hidden;
+
+  &-option {
+    position: relative;
+
+    &-active {
+      @include mouse-and-touchpad {
+        text-decoration: underline;
+      }
+    }
+
+    &-content {
+      opacity: 0.87;
+    }
+
+    &-disabled {
+      color: #999;
+    }
+  }
+
+  &-empty {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  @include phone {
+    padding: 12px 16px;
+  }
+}
+
+.InputSelect-disabled {
+  opacity: 0.3;
+
+  input {
+    cursor: not-allowed;
+  }
+}
+
+.rc-virtual-list-scrollbar-thumb {
+  background-color: var(--primary-text-color) !important;
+}
+
+.rc-virtual-list-holder {
+  height: fit-content;
+  max-height: 400px !important;
+}
+
+.InputSelect-item-option-active {
+  color: var(--primary-color);
+}

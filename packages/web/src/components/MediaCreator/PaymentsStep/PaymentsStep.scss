@@ -1,0 +1,42 @@
+@import "src/sass/variables";
+
+.payments-container {
+  flex: 1;
+  
+  .Select-selection-item, .Select-selection-placeholder {
+    text-transform: none;
+  }
+
+  .payments-switch {
+    label {
+      margin-bottom: 8px;
+    }
+  }
+
+  .react-switch {
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  
+   
+  label {
+    display: block;
+  }
+
+  .Error {
+    font-size: 12px;
+    color: $error-color;
+    list-style: none;
+    margin-top: -10px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+  }
+ 
+}
+
+.payments-form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}

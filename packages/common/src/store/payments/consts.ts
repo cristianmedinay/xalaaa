@@ -1,0 +1,12 @@
+/*
+ * @author BSG <dev@bsgroup.eu>
+ * @copyright Better Software Group S.A.
+ * @version: 1.0
+ */
+export const GET_PAYMENT_STATUS = "GET_PAYMENT_STATUS";
+export const GET_PAYMENT_STATUS_SUCCESS = "GET_PAYMENT_STATUS_SUCCESS";
+export const GET_PAYMENT_STATUS_FAILURE = "GET_PAYMENT_STATUS_FAILURE";
+
+export const SEARCH_PAYMENT = "SEARCH_PAYMENT";
+export const SEARCH_PAYMENT_SUCCESS = "SEARCH_PAYMENT_SUCCESS";
+export const SEARCH_PAYMENT_FAILURE = "SEARCH_PAYMENT_FAILURE";

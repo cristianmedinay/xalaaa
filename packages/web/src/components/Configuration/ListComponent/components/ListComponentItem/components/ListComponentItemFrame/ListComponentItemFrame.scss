@@ -1,0 +1,88 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.ListComponentItemFrame {
+  position: relative;
+  transition: all 0.2s;
+  aspect-ratio: 1.78/1;
+  border-radius: 5px;
+  background-color: var(--cell-background-color);
+  cursor: pointer;
+
+  &-container {
+    aspect-ratio: 1.78/1;
+    border-radius: 5px;
+    margin: 0 12.5px;
+    &--skeleton {
+      background: var(--cell-background-color);
+    }
+  }
+  &-image-container {
+    aspect-ratio: 1.78/1;
+    border-radius: 5px;
+    height: 100%;
+    position: relative;
+  }
+  &-image {
+    width: 100%;
+    height: 100%;
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+
+  &-information {
+    padding: 0;
+    padding-left: 20px;
+    position: absolute;
+    bottom: 7%;
+    max-height: 80%;
+    max-width: calc(80% - 20px);
+
+    &--title {
+      @include text-style('half', $bold: 'bolder');
+      width: 100%;
+      max-height: 100%;
+      text-shadow: $text-shadow;
+      color: white;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &--duration, &--parentMedia {
+      @include text-style('half', $bold: 'lighter');
+      text-shadow: $text-shadow;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    &--label {
+      @include text-style('half', $bold: 'lighter');
+      text-shadow: $text-shadow;
+      color: white;
+    }
+  }
+
+  &-information--series {
+    position: absolute;
+    bottom: 10px;
+
+    &--title {
+      font-weight: 500;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  &-skeleton {
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    bottom: 26px;
+    left: 20px;
+  }
+}

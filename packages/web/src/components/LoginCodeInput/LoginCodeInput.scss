@@ -1,0 +1,29 @@
+@import "src/sass/variables";
+
+.LoginCodeForm {
+  height: 720px;
+  margin-bottom: 0px;
+  .LoginCodeHeader {
+    margin-bottom: 55px;
+  }
+  .Input__input {
+    text-transform: uppercase;
+  }
+
+  input::-webkit-input-placeholder {
+    text-transform: capitalize;
+  }
+}
+
+.LoginCodeResponse {
+  font-size: 16px;
+
+  &__success {
+    color: $success-color;
+  }
+}
+
+.LoginCodeButton {
+  width: 100%;
+  justify-content: center;
+}

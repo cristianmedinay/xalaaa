@@ -1,0 +1,7 @@
+@import "src/sass/epg";
+
+.epg-mobile-timeline {
+  display: flex;
+  flex-direction: row;
+  background: $background-contrast-color;
+}

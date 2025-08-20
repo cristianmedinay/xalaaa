@@ -1,0 +1,30 @@
+@import "src/sass/utils";
+
+.ApplicationMenu {
+  @include prevent-tab-highlights;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+
+  .Menu {
+    display: flex;
+    flex: 1;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    justify-content: space-evenly;
+
+    @include desktopDown {
+      display: none;
+    }
+  }
+
+  .Menu-item {
+    opacity: 0.87;
+    text-shadow: $text-shadow;
+  }
+
+  .Menu-horizontal:not(.Menu-dark) > .Menu-item {
+    margin: 0;
+  }
+}

@@ -1,0 +1,19 @@
+@import "src/sass/utils";
+
+.WatchingProgressBar {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  left: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  background: var(--watching-progress-container-color);
+
+  @include transition-transform(2s ease-out);
+
+  &-value {
+    @include transition-transform(2s ease-out);
+    background: var(--watching-progress-value-color);
+  }
+}

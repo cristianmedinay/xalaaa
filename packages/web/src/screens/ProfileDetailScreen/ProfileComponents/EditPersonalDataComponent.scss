@@ -1,0 +1,25 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.EditPersonalDataContainer {
+  margin: 0px 50px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+
+  &__contactsFormContainer {
+    width: 100%;
+    position: relative;
+    max-width: 591px;
+  }
+
+  &__passwordFormContainer {
+    margin-top: 5%;
+    width: 100%;
+    position: relative;
+    max-width: 591px;
+    margin-bottom: 180px;
+  }
+}

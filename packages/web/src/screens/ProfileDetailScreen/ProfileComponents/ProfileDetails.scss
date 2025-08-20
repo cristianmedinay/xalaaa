@@ -1,0 +1,121 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.loaderSpinner {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ProfileDetails {
+  margin: 0 50px 200px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__section {
+    width: 100%;
+    position: relative;
+    max-width: 591px;
+  }
+
+  &__editButton {
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    align-items: center;
+
+    p {
+      padding: 0;
+      margin: 0;
+      margin-left: 11px;
+      text-decoration: underline;
+      @include text-style();
+      text-underline-offset: 0.2em;
+      text-decoration-thickness: 1px;
+    }
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &__headerParagraph {
+    @include text-style();
+    text-transform: uppercase;
+  }
+
+  &__underline {
+    width: 100%;
+    max-width: 591px;
+    height: 1px;
+    background-color: white;
+    margin: 50px 0px;
+  }
+
+  &__contentTitle {
+    @include text-style();
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  &__contentData {
+    padding-top: 0px;
+    margin-top: 5px;
+    @include text-style();
+    margin-bottom: 5px;
+  }
+
+  &__deleteButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .MediaButton {
+      border-radius: 70px;
+    }
+
+    .MediaButton__text {
+      margin-left: 0;
+    }
+  }
+
+  &__favChannelsContainer {
+    display: flex;
+  }
+
+  &__favChannels {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    p {
+      @include text-style();
+      margin-left: 14px;
+      margin-right: 14px;
+    }
+  }
+
+  &__imgContainer {
+    box-sizing: border-box;
+    display: flex;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cell-background-color);
+
+    img {
+      height: auto;
+      width: 70%;
+      max-height: 70%;
+    }
+  }
+}

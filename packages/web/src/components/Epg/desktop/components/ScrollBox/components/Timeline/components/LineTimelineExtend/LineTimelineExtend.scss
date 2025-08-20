@@ -1,0 +1,16 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-desktop-line-extend {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: $epg-time-marker-height;
+  height: 25px;
+  pointer-events: none;
+  background: $active-color;
+
+  @include largeDown() {
+    height: 12px;
+  }
+}

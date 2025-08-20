@@ -1,0 +1,73 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-desktop-buttons {
+  position: absolute;
+  width: 100%;
+  z-index: 10000;
+
+  &__container {
+    background: linear-gradient(to right, #0e0f12, #0e0f12 70%, #00000000 100%);
+    position: absolute;
+    top: 0;
+    left: 340px;
+    color: white;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+
+    &.right {
+      background: linear-gradient(to left, #0e0f12, #0e0f12 70%, #00000000 100%);
+      left: auto;
+      right: -1px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: white;
+    border: none;
+    z-index: 10000;
+    cursor: pointer;
+
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @include largeDown {
+    &__container {
+      left: 250px;
+    }
+
+    &__button {
+      svg {
+        margin-top: 5px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &.fixed-epg-elements {
+    position: fixed;
+    top: 0;
+    z-index: 40;
+
+    .epg-desktop-buttons__container {
+      &.right {
+        right:123px;
+
+        @include largeDown {
+          right:7px;
+        }
+      }
+    }
+  }
+
+}

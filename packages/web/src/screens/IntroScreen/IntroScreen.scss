@@ -1,0 +1,89 @@
+@import "../../sass/variables";
+@import "../../sass/utils";
+
+.IntroScreen {
+  &__text {
+    padding: 50px 0 100px 0;
+  }
+
+  &__title {
+    font-size: 4.375rem;
+    font-weight: 900;
+    margin-bottom: 4.375rem;
+
+    @media screen and (min-width: $screen-resolution-wuxga) {
+      font-size: 2.375rem;
+      margin-bottom: 2.375rem;
+    }
+  }
+
+  section {
+    padding-left: var(--app-padding-left);
+    padding-right: var(--app-padding-right);
+  }
+
+  .EmailForm {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+
+    @include phone {
+      max-width: 100%;
+    }
+
+    @include tablet {
+      max-width: 80%;
+    }
+
+    .Input {
+      height: 54px;
+      padding: 0.8125rem 0 0.8125rem 1.75rem;
+      background: #fff;
+
+      @media screen and (min-width: $screen-resolution-wuxga) {
+        padding: 0 0 0 0.75rem;
+      }
+
+      &__input {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
+
+    .MediaButton {
+      height: 54px;
+      margin: 0 -0.3rem 0;
+      padding: 0.8125rem 2.5rem;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: 0.82px;
+      &__text {
+        margin-left: 0.3rem;
+      }
+      @media screen and (min-width: $screen-resolution-wuxga) {
+        padding: 0.8125rem 1.5rem;
+        font-size: 0.8125rem;
+      }
+
+      @include phone {
+        display: block;
+        font-size: 2.65rem;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    .Input {
+      .MediaButton {
+        margin-left: 20px;
+      }
+    }
+
+    .text-normal {
+      margin-bottom: 25px;
+    }
+  }
+
+  .ListComponentHorizontal {
+    padding: 0 !important;
+  }
+}

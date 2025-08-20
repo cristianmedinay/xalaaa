@@ -1,0 +1,56 @@
+@import "src/sass/utils";
+
+$container-padding: 0 130px 24px 150px;
+$container-padding-desktop: 0 50px 12px 70px;
+
+.ListComponentDotsContainer {
+  position: relative;
+  margin: 0;
+  padding: $container-padding;
+
+  @include desktop {
+    padding: $container-padding-desktop;
+  }
+
+  @include large {
+    padding: $container-padding-desktop;
+  }
+
+  &__Line {
+    display: block;
+    height: 0px;
+    opacity: 0.4;
+    border-top: solid 1px #ffffff;
+    margin-bottom: 20px;
+  }
+
+  &__Dots {
+    position: relative;
+    margin: 0;
+    padding: 0 0;
+  }
+
+  &__Dot {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  &__DotButton {
+    opacity: 0.6;
+    width: 8px;
+    height: 8px;
+    display: block;
+    padding: 0;
+    margin: 4px;
+    border-radius: 50%;
+    font-size: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--primary-text-color);
+
+    &--active {
+      opacity: 1;
+      background-color: var(--secondary-color);
+    }
+  }
+}

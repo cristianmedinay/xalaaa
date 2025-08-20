@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="72px" viewBox="0 0 45 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>ic_arrow_left</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M32.7053498,59.7086742 C31.5398507,60.7637753 29.7386195,60.7637753 28.5731204,59.7086742 L1.34760279,32.5970539 C0.81782995,32.0694974 0.5,31.4364307 0.5,30.697836 L0.5,30.3813056 C0.5,29.6427109 0.817860088,29.0096382 1.34760279,28.4820877 L28.5731204,1.3704674 C29.7386195,0.209844199 31.5398507,0.209844199 32.7053498,1.3704674 C33.7648834,2.53109061 33.7648834,4.32478647 32.7053498,5.37988756 L7.49305455,30.4867077 L32.7053498,55.5935278 C33.7648834,56.754151 33.7648834,58.5478469 32.7053498,59.7084701 L32.7053498,59.7086742 Z" id="path-1"></path>
+        <filter x="-30.3%" y="-13.3%" width="160.6%" height="133.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-57.000000, -358.000000)" fill-rule="nonzero">
+            <g id="ic_arrow_left" transform="translate(79.500000, 392.000000) rotate(-360.000000) translate(-79.500000, -392.000000) translate(62.500000, 361.500000)">
+                <g id="Path">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill-opacity="0.8" fill="#C4C4C4" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

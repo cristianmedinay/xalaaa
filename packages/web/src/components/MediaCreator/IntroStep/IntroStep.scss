@@ -1,0 +1,28 @@
+.media-images-form {
+  flex: 1;
+}
+
+.intro-container {
+  padding-top: 2vh;
+  
+  .rc-upload {
+    max-width: 40vw;
+  }
+
+  .upload {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+  }
+}
+
+.intro-section {
+  padding-bottom: 50px;
+  flex: 1;
+}
+

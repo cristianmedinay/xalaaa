@@ -1,0 +1,127 @@
+@import "~rc-steps/assets/index.css";
+
+.rc-steps-item-finish {
+  .rc-steps-item-icon {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--primary-color);
+    > .rc-steps-icon {
+      color: var(--primary-color);
+      font-size: 20px;
+    }
+  }
+}
+
+.rc-steps-item-finish,
+.rc-steps-item-error {
+  .rc-steps-item-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    > .rc-steps-icon {
+      svg {
+        display: block;
+      }
+    }
+  }
+}
+
+.rc-steps-item-process {
+  .rc-steps-item-icon {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  .rc-steps-item-title,
+  .rc-steps-item-description {
+    color: var(--primary-text-color);
+  }
+}
+
+.rc-steps-item-wait,
+.rc-steps-item-active {  
+  .rc-steps-item-icon {
+    width: 12px;
+    height: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    .rc-steps-icon {
+      opacity: 0;
+    }
+  }
+}
+
+.rc-steps-item-wait,
+.rc-steps-item-finish {
+  .rc-steps-item-title,
+  .rc-steps-item-description {
+    color: var(--primary-text-color-d-30);
+  }
+}
+
+.rc-steps-item-finish .rc-steps-item-title:after {
+  background-color: var(--primary-color);
+}
+
+.rc-steps-item-finish .rc-steps-item-title:after {
+  background-color: var(--primary-color);
+}
+
+.rc-steps-item-container {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rc-steps-item-icon {
+  margin-right: 0px;
+}
+
+.rc-steps-item {
+  flex: 1 !important;
+  position: relative;
+  margin-right: 0px !important;
+
+  &:after, &:before {
+    content: "";
+    height: 1px;
+    background: var(--primary-text-color);
+    opacity: 0.3;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 40%;
+  }
+
+  &:after {
+    left: 85%;
+
+  }
+  
+  &:before {
+    right: 85%;
+  }
+
+  &:first-of-type {
+    &:before {
+      display: none;
+    }
+  }
+
+  &:last-of-type {
+    &:after {
+      display: none;
+    }
+  }
+
+  .rc-steps-item-title:after {
+    display: none;
+  }
+}
+
+.rc-steps {
+  display: flex;
+}

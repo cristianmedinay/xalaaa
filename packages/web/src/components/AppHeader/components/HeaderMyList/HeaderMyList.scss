@@ -1,0 +1,33 @@
+@import "src/sass/utils";
+
+.HeaderMyList {
+  @include phone {
+    display: none;
+  }
+}
+
+.circular {
+  display: inline-block;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+  text-align: center;
+
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.dd-wrapper {
+  background-color: transparent;
+  opacity: 1;
+  user-select: none;
+
+  .dd-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

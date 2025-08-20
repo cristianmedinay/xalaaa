@@ -1,0 +1,11 @@
+.Select {
+    &.FormInputError {
+        margin-top: 0 !important;
+        height: inherit !important;
+        padding: 0 !important;
+    }
+
+    .Select-selector {
+        border-radius: 30px;
+    }
+}

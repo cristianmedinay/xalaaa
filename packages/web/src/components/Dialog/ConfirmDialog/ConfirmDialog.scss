@@ -1,0 +1,19 @@
+.ConfirmDialog {
+  .Dialog-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__message {
+    font-size: 1.5rem;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  .MediaButton {
+    padding: 1.5rem;
+  }
+}

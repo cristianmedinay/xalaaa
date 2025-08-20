@@ -1,0 +1,31 @@
+.pill-box {
+  font-size: 1rem;
+  background: none;
+  padding: 4px 16px;
+  border-radius: 30px;
+  margin-right: 8px;
+  border: 1px solid var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.PillsIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+}
+
+.removable::after {
+  margin-left: 10px;
+  content: "x";
+  color: #d32f2f;
+  font-weight: 300;
+}
+
+.active {
+  background: var(--primary-color);
+}

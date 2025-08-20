@@ -1,0 +1,19 @@
+.month-picker {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .picker-icon {
+    padding: 0 10px;
+    cursor: pointer;
+    display: flex;
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    justify-content: center;
+  }
+  .selected-month {
+    width: 150px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,15 @@
+@import "src/sass/epg";
+
+.epg-desktop-row {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  &-active {
+    background: $active-secondary-color;
+
+    .epg-desktop-program-content {
+      background: $active-secondary-color;
+    }
+  }
+}

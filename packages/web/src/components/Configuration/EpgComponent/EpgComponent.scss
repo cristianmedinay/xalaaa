@@ -1,0 +1,34 @@
+@import "src/sass/utils";
+
+.epg-component {
+  padding-left: var(--app-padding-left);
+  padding-right: var(--app-padding-right);
+  height: fit-content;
+  margin-bottom: 20px;
+
+  @include largeDown {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include  desktopDown {
+    height: 100%;
+  }
+
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  &-header {
+    @include text-style();
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include largeDown {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}

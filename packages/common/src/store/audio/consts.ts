@@ -1,0 +1,19 @@
+/*
+ * @author BSG <dev@bsgroup.eu>
+ * @copyright Better Software Group S.A.
+ * @version: 1.0
+ */
+const PREFIX = "AUDIO";
+const SET_AUDIO_SOURCE = `${PREFIX}_SET_AUDIO_SOURCE`;
+const SET_AUDIO_ERROR = `${PREFIX}_SET_AUDIO_ERROR`;
+const SET_AUDIO_MEDIA = `${PREFIX}_SET_AUDIO_MEDIA`;
+const RESET_AUDIO_STORE = `${PREFIX}_RESET_STORE`;
+const SET_IS_BOTTOM_MENU_VISIBLE = `${PREFIX}_SET_IS_BOTTOM_MENU_VISIBLE`;
+
+export const ActionTypes = {
+  SET_AUDIO_SOURCE,
+  SET_AUDIO_ERROR,
+  SET_AUDIO_MEDIA,
+  RESET_AUDIO_STORE,
+  SET_IS_BOTTOM_MENU_VISIBLE,
+};

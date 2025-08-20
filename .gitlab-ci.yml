@@ -1,0 +1,54 @@
+image: registry-aws.vidneo.tc/public-group/node-ci/ci-node-14:latest
+stages:
+  - build_staging
+  - clear_cache_staging
+  - build_prod
+  - clear_cache_prod
+
+build_app_staging:
+  stage: build_staging
+  tags:
+    - docker
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+  script:
+    - yarn install --frozen-lockfile
+    - cd packages/web
+    - yarn build:staging
+    - aws s3 sync build/static/ s3://staging-xalott.xal-vidneo.cat/static/
+    - aws s3 sync build/ s3://staging-xalott.xal-vidneo.cat --delete --exclude "index_orig.html" --exclude "QB/*" --exclude "registration-bg.png" --exclude "sitemap.xml" --exclude "sitemap/*" --exclude "3cat/*" --exclude "static/*" 
+
+clear_cache_staging_app:
+  stage: clear_cache_staging
+  tags: 
+    - docker
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+  script:
+    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_STAGING --paths "/*" "/"
+  needs:
+    - job: build_app_staging
+
+build_app_prod:
+  stage: build_prod
+  tags:
+    - docker
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script: 
+    - yarn install --frozen-lockfile
+    - cd packages/web
+    - yarn build:prod
+    - aws s3 sync build/static/ s3://laxarxames.cat/static/
+    - aws s3 sync build/ s3://laxarxames.cat --delete --exclude "index_orig.html" --exclude "QB/*" --exclude "registration-bg.png" --exclude "sitemap.xml" --exclude "sitemap/*" --exclude "3cat/*" --exclude "static/*" 
+
+clear_cache_prod_app:
+  stage: clear_cache_prod
+  tags: 
+    - docker
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script:
+    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_PROD --paths "/*" "/"
+  needs:
+    - job: build_app_prod

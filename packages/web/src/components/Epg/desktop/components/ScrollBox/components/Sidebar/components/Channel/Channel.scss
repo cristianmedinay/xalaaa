@@ -1,0 +1,45 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-desktop-channel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 15px;
+  background: $background-contrast-color;
+  border-bottom: 1px solid $border-color;
+
+  @include box-shadow(8px 9px 17px $shadow-color);
+  @include transition($epg-transition);
+
+  @include largeDown() {
+    font-size: 24px;
+  }
+
+  &-active {
+    background: $active-color;
+  }
+
+  &-title {
+    @include ellipsis();
+    @include line-clamp-ellipsis(2);
+    @include text-style("half", "bolder");
+  }
+
+  &-logo {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 25px;
+    height: $channel-logo-size;
+    width: $channel-logo-size;
+
+    @include largeDown() {
+      margin-right: 15px;
+    }
+  }
+}
+

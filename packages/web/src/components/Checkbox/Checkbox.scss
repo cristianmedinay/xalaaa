@@ -1,0 +1,48 @@
+@import "~rc-checkbox/assets/index.css";
+
+.rc-checkbox {
+
+  input:focus {
+    border-color: var(--primary-color);
+  }
+}
+
+.rc-checkbox-input {
+  width: 19px;
+  height: 19px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.rc-checkbox-inner {
+  @extend .rc-checkbox-input;
+
+  border: 1px solid #eee;
+  border-radius: 2px;
+  background-color: transparent;
+
+  &::after {
+    display: none;
+    opacity: 0;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+}
+
+.rc-checkbox:hover .rc-checkbox-inner,
+.rc-checkbox-input:focus + .rc-checkbox-inner {
+  border-color: var(--primary-color);
+}
+
+.rc-checkbox-checked .rc-checkbox-inner {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+
+  &::after {
+    @extend .rc-checkbox-inner, ::after;
+    display: block;
+    opacity: 1;
+  }
+}

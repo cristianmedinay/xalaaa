@@ -1,0 +1,68 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.ListComponentItemPromo {
+  position: relative;
+  transition: all 0.2s;
+  aspect-ratio: 1.73/1;
+  border-radius: 5px;
+  display: flex;
+  background-color: var(--cell-background-color);
+  cursor: pointer;
+
+  &-container {
+    position: relative;
+    margin: 0 15px;
+    aspect-ratio: 1.73/1;
+    border-radius: 5px;
+
+    &--skeleton {
+      background: var(--cell-background-color);
+    }
+  }
+
+  &-image-container {
+    aspect-ratio: 1/1.32;
+    border-radius: 5px;
+    height: 100%;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      border-radius: 5px 0 0 5px;
+      object-fit: cover;
+    }
+  }
+
+  &-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0 22px 0 12px;
+    position: relative;
+
+    &--title {
+      display: -webkit-box;
+      word-wrap: break-word;
+      max-height: 2.3em;
+      word-break: break-word;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+      font-weight: 400;
+    }
+  }
+
+  &-skeleton {
+    position: absolute;
+    width: 100%;
+    bottom: 26px;
+    left: 20px;
+  }
+}

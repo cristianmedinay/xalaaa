@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-Black.otf");
+  src: local("BR Sonoma Black"), local("BRSonoma-Black"),
+    url("BRSonoma-Black.otf") format("opentype"),
+    url("BRSonoma-Black.woff2") format("woff2"),
+    url("BRSonoma-Black.woff") format("woff"),
+    url("BRSonoma-Black.woff2") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-BlackItalic.otf");
+  src: local("BR Sonoma Black Italic"), local("BRSonoma-BlackItalic"),
+    url("BRSonoma-BlackItalic.otf") format("opentype"),
+    url("BRSonoma-BlackItalic.woff2") format("woff2"),
+    url("BRSonoma-BlackItalic.woff") format("woff"),
+    url("BRSonoma-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-Bold.otf");
+  src: local("BR Sonoma Bold"), local("BRSonoma-Bold"),
+    url("BRSonoma-Bold.otf") format("opentype"),
+    url("BRSonoma-Bold.woff2") format("woff2"),
+    url("BRSonoma-Bold.woff") format("woff"),
+    url("BRSonoma-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-BoldItalic.otf");
+  src: local("BR Sonoma Bold Italic"), local("BRSonoma-BoldItalic"),
+    url("BRSonoma-BoldItalic.otf") format("opentype"),
+    url("BRSonoma-BoldItalic.woff2") format("woff2"),
+    url("BRSonoma-BoldItalic.woff") format("woff"),
+    url("BRSonoma-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-ExtraLight.otf");
+  src: local("BR Sonoma ExtraLight"), local("BRSonoma-ExtraLight"),
+    url("BRSonoma-ExtraLight.otf") format("opentype"),
+    url("BRSonoma-ExtraLight.woff2") format("woff2"),
+    url("BRSonoma-ExtraLight.woff") format("woff"),
+    url("BRSonoma-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-Light.otf");
+  src: local("BR Sonoma Light"), local("BRSonoma-Light"),
+    url("BRSonoma-Light.otf") format("opentype"),
+    url("BRSonoma-Light.woff2") format("woff2"),
+    url("BRSonoma-Light.woff") format("woff"),
+    url("BRSonoma-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-LightItalic.otf");
+  src: local("BR Sonoma Light Italic"), local("BRSonoma-LightItalic"),
+    url("BRSonoma-LightItalic.otf") format("opentype"),
+    url("BRSonoma-LightItalic.woff2") format("woff2"),
+    url("BRSonoma-LightItalic.woff") format("woff"),
+    url("BRSonoma-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-Regular.otf");
+  src: local("BR Sonoma Regular"), local("BRSonoma-Regular"),
+    url("BRSonoma-Regular.otf") format("opentype"),
+    url("BRSonoma-Regular.woff2") format("woff2"),
+    url("BRSonoma-Regular.woff") format("woff"),
+    url("BRSonoma-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BR Sonoma";
+  src: url("BRSonoma-RegularItalic.otf");
+  src: local("BR Sonoma Italic"), local("BRSonoma-RegularItalic"),
+    url("BRSonoma-RegularItalic.otf") format("opentype"),
+    url("BRSonoma-RegularItalic.woff2") format("woff2"),
+    url("BRSonoma-RegularItalic.woff") format("woff"),
+    url("BRSonoma-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

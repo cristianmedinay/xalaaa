@@ -1,0 +1,47 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.DeleteAccountSuccessScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+
+  &_content {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      line-height: 47px;
+      font-weight: 400;
+      margin-bottom: 0;
+      margin-top: 20px;
+      font-size: $h1-font-size;
+
+      @include phone {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 12px;
+
+      @include phone {
+        font-size: 14px;
+      }
+    }
+
+    .MediaButton {
+      width: 100%;
+      border-radius: 70px;
+      margin-right: 0;
+    }
+  }
+}

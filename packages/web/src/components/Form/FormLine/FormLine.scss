@@ -1,0 +1,9 @@
+@import "src/sass/variables";
+
+.FormLine {
+  display: block;
+  height: 0px;
+  width: 100%;
+  border: solid 1px $form-line;
+  margin: 51px 0 34px 0;
+}

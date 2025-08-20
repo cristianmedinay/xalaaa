@@ -1,0 +1,30 @@
+@import "src/sass/utils";
+.SearchScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__loader {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__no-data {
+    @include text-style();
+  }
+
+  section {
+    flex: 1;
+    padding-left: var(--app-padding-left);
+    padding-right: var(--app-padding-right);
+    @include phone {
+        padding-left: var(--app-padding-x-phone);
+        padding-right: var(--app-padding-x-phone);
+    }
+    @include tablet {
+        padding-left: var(--app-padding-x-tablet);
+        padding-right: var(--app-padding-x-tablet);
+    }
+  }
+}

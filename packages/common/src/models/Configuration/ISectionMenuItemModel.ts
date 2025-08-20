@@ -1,0 +1,18 @@
+/*
+ * @author BSG <dev@bsgroup.eu>
+ * @copyright Better Software Group S.A.
+ * @version: 1.0
+ */
+import { ComponentType } from "../../enums";
+
+import { IActionModel } from "./IActionModel";
+import { IComponentBaseModel } from "./IComponentBaseModel";
+
+export interface ISectionMenuItemModel extends IComponentBaseModel {
+  ComponentTypeCode: typeof ComponentType.SectionMenuItem;
+
+  Title?: string;
+  TitleTranslationKey?: string;
+
+  Action?: IActionModel;
+}

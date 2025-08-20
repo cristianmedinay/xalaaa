@@ -1,0 +1,11 @@
+.watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  &__error_message {
+    font-size: 2rem;
+  }
+}

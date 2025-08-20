@@ -1,0 +1,14 @@
+@import "src/sass/utils";
+
+.Rating {
+  margin-top: 5px;
+  color: #ffda68;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  @include tabletDown {
+    font-size: 1.5rem;
+  }
+}

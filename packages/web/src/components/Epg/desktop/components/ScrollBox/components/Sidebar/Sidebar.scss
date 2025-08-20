@@ -1,0 +1,14 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-desktop-sidebar {
+  position: sticky;
+  float: left;
+  left: 0;
+  z-index: 15;
+  width: $epg-desktop-sidebar-width;
+
+  @include largeDown() {
+    width: $epg-desktop-sidebar-width-tablet;
+  }
+}

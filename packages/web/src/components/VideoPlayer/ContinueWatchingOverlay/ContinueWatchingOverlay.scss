@@ -1,0 +1,33 @@
+.ContinueWatchingOverlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  &__Popup {
+    width: 44%;
+    border-radius: 10px;
+    color: black;
+    background-color: #f2f2f2;
+  }
+
+  &__Image {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  &__Footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 0rem;
+    justify-content: space-evenly;
+  }
+}

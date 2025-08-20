@@ -1,0 +1,18 @@
+@import "src/sass/utils";
+
+.SettingsMenu {
+  &__Container {
+    @include prevent-tab-highlights;
+    @include tabletDown {
+      text-align: center;
+    }
+  }
+
+  margin: 0;
+  position: relative;
+  padding-inline-start: 1.2em;
+}
+
+div.empty {
+  height: 4em;
+}

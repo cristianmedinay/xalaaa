@@ -1,0 +1,64 @@
+@import "src/sass/variables";
+@import "src/sass/utils";
+
+.CategoryPicker {
+  position: relative;
+  margin-bottom: 50px;
+  color: var(--primary-text-color);
+  background-color: var(--bg-color);
+
+  .slick-track {
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0) 0%,
+      var(--primary-text-color) 100%
+    );
+    opacity: 0.3;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include transform(translateY(-2px));
+  }
+
+  &__item {
+    white-space: nowrap;
+    padding: 1rem 1.6rem;
+    cursor: pointer;
+    @include text-style();
+    text-transform: capitalize;
+    border-bottom: 5px solid transparent;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    transition: border-bottom 0.1s ease;
+    text-align: center;
+
+    @include desktopDown {
+      font-size: 24px;
+    }
+
+    @include phone {
+      font-size: 20px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active,
+    &--active {
+      border-bottom: 5px solid var(--primary-color);
+    }
+
+    &--selected,
+    &--selected:hover {
+      border-bottom: 5px solid var(--primary-color);
+      @include text-style('half', 'bolder');
+    }
+  }
+}

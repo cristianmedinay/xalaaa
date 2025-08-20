@@ -1,0 +1,13 @@
+@import "src/sass/utils";
+
+.SettingsScreen {
+  padding-left: var(--app-padding-left);
+  padding-right: var(--app-padding-right);
+  height: 100%;
+}
+
+.SettingsScreen__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

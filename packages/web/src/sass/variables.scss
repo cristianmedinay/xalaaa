@@ -1,0 +1,146 @@
+// color scheme
+$primary: #101010;
+$primary-notification: #0094ff;
+$background-notification: rgba(0, 0, 0, 0.95);
+$primary-text: #ffffff;
+$secondary: #233661;
+$secondary-text: #9d9d9d;
+$primary-bg: #101010;
+$secondary-bg: #101010;
+$disabled: #233661;
+$other: #1eb89b;
+$icon-color: #ffffff;
+$error-color: #d32f2f;
+$success-color: #4bb543;
+$disable-bg: #5a5a5a;
+$disable-text: #8f8f8f;
+$form-line: #6a6a6a;
+$header-search-background: #1b1e22;
+$gradient-header-desktop: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.55) 57.81%,
+  rgba(0, 0, 0, 0) 91.41%
+);
+$gradient-header-tablet: linear-gradient(
+  180deg,
+  rgba(19, 26, 42, 0.8) 0%,
+  rgba(19, 26, 42, 0) 100%
+);
+$gradient-header-phone: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.49) 42.71%,
+  rgba(0, 0, 0, 0) 100%
+);
+$overlay-menu: linear-gradient(
+  90deg,
+  #131a2a 28.41%,
+  rgba(19, 26, 42, 0.86) 99.3%,
+  #131a2a 99.31%
+);
+$item-channel-background: #131a2a;
+$image-channel-background: #131313;
+$podcast-background-color: #0e0f11;
+
+//assets
+$icons-root: "../icons/" !default;
+
+$screen-resolution-tv-large: "screen and (min-width : 1920px)";
+$screen-resolution-tv-small: "screen and (max-width : 1919px)";
+$screen-resolution-wuxga: 1920px;
+
+// ***** Breakpoints for Responsive Screen
+// width scale for phone
+$phone-max-width: 499px !default;
+// height scale for phone
+$phone-min-height: 346px !default;
+$phone-max-height: 695px !default;
+// width scale for tablet
+$tablet-min-width: 500px !default;
+$tablet-max-width: 799px !default;
+// height scale for tablet
+$tablet-min-height: 800px !default;
+$tablet-max-height: 1440px !default;
+// Desktop Scale
+$desktop-min-width: 800px !default;
+$desktop-max-width: 1100px !default;
+// Large Scale
+$large-min-width: 1100px !default;
+$large-max-width: 1399px !default;
+
+// Button
+$button-font-default: 1.375rem;
+$button-height-default: 80px;
+$button-height-md: 40px;
+$button-height-sm: 30px;
+$button-bg: #ffa000;
+$button-radius: 27px;
+
+// Input
+$input-radius: 27px;
+$input-bg: #f2f2f2;
+$input-font-size: 16px;
+
+// Label
+$label-font-size: 16px;
+
+// headers
+$h1-font-size: 34px;
+
+
+
+
+
+// Sizes
+
+$main-size-max: 40;
+$main-size-min: 24;
+
+$half-size-max: 20;
+$half-size-min: 16;
+
+$line-height: 1.1em;
+
+
+// Bold
+
+$lighter: 100;
+$bolder: 700;
+
+//$shadows
+
+$text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+$icon-shadow: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+
+%header-height {
+  height: 66.66vh;
+
+  @media screen and (min-width: $phone-max-width) {
+    height: calc(max(66.66vh, 600px));
+  }
+}
+
+%imageWithRatio {
+  height: 100%;
+  width: 100%;
+  min-width: 120vh; // 100vh * 2 / 3 * 16 / 9
+  position: absolute;
+  background-size: cover;
+  -moz-background-size: cover; /* Firefox 3.6 */
+  background-position-y: top; /* Internet Explorer 7/8 */
+  background-repeat: no-repeat;
+  position: relative;
+
+  background-position-x: 140%;
+
+  @media screen and (min-width: $phone-max-width) {
+    background-position-x: 100%;
+  }
+
+  @media screen and (min-width: $tablet-max-width) {
+    background-position-x: 50%;
+  }
+
+  @media screen and (min-width: $desktop-max-width) {
+    background-position-x: 0;
+  }
+}

@@ -1,0 +1,237 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.MediaAdditionalInfo {
+  display: flex;
+  align-items: center;
+
+  @include font(26px, 30px);
+
+  @include phone {
+    @include font(14px, 16px, 400);
+  }
+
+  @include tablet {
+    @include font(20px, 24px, 500);
+  }
+
+  &__box {
+    @include font(20px, 22px);
+
+    @include phone {
+      @include font(14px, 22px);
+    }
+  }
+}
+
+.MediaStartInfo {
+  @include text-style();
+}
+
+.RecommendationList {
+  padding-top: 0px;
+  @include main-size('padding-bottom');
+}
+
+%info-container {
+  /* @extend %responsive-aspect-ratio; */
+  text-shadow: $text-shadow;
+  @extend %header-height;
+
+  display: flex;
+  align-items: flex-end;
+
+  @include largeDown() {
+    margin-top: 0;
+  }
+}
+
+%responsive-aspect-ratio {
+  aspect-ratio: 3/5;
+
+
+  @media (min-width: 500px) {
+    aspect-ratio: 4/3;
+  }
+
+  @media (min-width: 800px) {
+    aspect-ratio: 8/5;
+  }
+
+  @media (min-width: 1200px) {
+    aspect-ratio: 16/7;
+  }
+
+  @media (min-width: 1200px) {
+    aspect-ratio: 2.619/1;
+  }
+
+  /*
+  aspect-ratio: 1920/727;
+
+  @include phone() {
+    aspect-ratio: 414/481;
+  }
+
+  @include tablet() {
+    aspect-ratio: 1024/608;
+  } */
+}
+
+%info {
+  @extend %responsive-padding;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content:end;
+  align-items: flex-start;
+  gap: 20px;
+  text-shadow: $text-shadow;
+
+  width: 33%;
+  height: 100%;
+  max-height: calc(100% - 151px);
+  margin-bottom: 20px;
+
+  @include desktopDown() {
+    max-height: calc(100% - 98px);
+  }
+
+  @include tabletDown() {
+    width: 80%;
+  }
+
+  @include phone() {
+    max-height: calc(100% - 94px);
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+%main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 22px;
+  text-shadow: $text-shadow;
+
+  margin-bottom: 15px;
+
+  @include largeDown() {
+    gap: 12px;
+  }
+
+  @include tabletDown() {
+    gap: 6px;
+  }
+}
+
+%genres {
+  @include text-style();
+  line-height: 1.2em;
+  letter-spacing: 0;
+  text-shadow: $text-shadow;
+}
+
+%description {
+  @include text-style();
+  line-height: 1.2em;
+  letter-spacing: 0;
+  text-shadow: $text-shadow;
+}
+
+%parentTitle {
+  @include text-style();
+  line-height: 1.2em;
+  letter-spacing: 0;
+  text-shadow: $text-shadow;
+  @include half-size('margin-top')
+}
+
+%title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: $text-shadow;
+
+  @include text-style('main', 'bolder');
+  line-height: 1.2em;
+  letter-spacing: 0;
+}
+
+%details-container {
+  padding-top: 1rem;
+  @extend %responsive-padding;
+  display: flex;
+  gap: 20px;
+
+  @include tablet() {
+    flex-direction: column;
+  }
+
+  @include phone() {
+    flex-direction: column;
+  }
+}
+
+%responsive-padding {
+  padding-left: var(--app-padding-left);
+  padding-right: var(--app-padding-right);
+
+  @include tablet() {
+    padding-left: var(--app-padding-x-tablet);
+    padding-right: var(--app-padding-x-tablet);
+  }
+
+  @include phone() {
+    padding-left: var(--app-padding-x-phone);
+    padding-right: var(--app-padding-x-phone);
+  }
+}
+
+%details {
+  width: 50%;
+
+  @include tablet() {
+    width: unset;
+  }
+
+  @include phone() {
+    width: unset;
+  }
+}
+
+%details-header {
+  @include text-style();
+  line-height: 1.2em;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+%details-text {
+  @include text-style();
+  line-height: 1.2em;
+  letter-spacing: 0;
+  width: 80%;
+  max-width: 500px;
+
+  @include phone() {
+    width: unset;
+  }
+}
+
+%actions {
+  display: flex;
+
+  @include tabletDown {
+    flex-wrap: wrap;
+  }
+
+  .MediaButton {
+    @include desktopDown {
+      margin-top: 10px;
+    }
+  }
+}

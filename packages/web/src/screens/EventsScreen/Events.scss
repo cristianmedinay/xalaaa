@@ -1,0 +1,77 @@
+@import "src/sass/utils";
+
+.events-screen {
+  min-height: 100vh;
+  section {
+    &.events {
+      padding-left: var(--app-padding-left);
+      padding-right: var(--app-padding-right);
+      .cursor-pointer {
+        cursor: pointer;
+      }
+
+      .event-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__actions {
+          display: inline-flex;
+          p {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-right: 30px;
+            cursor: pointer;
+            user-select: none;
+
+            svg {
+              font-size: 2rem;
+            }
+
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+        }
+        &__filters {
+          p {
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+        }
+
+        .__event-picker {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &__loader {
+    display: flex;
+    justify-content: center;
+    &__more-button {
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.events-grid {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  padding-left: var(--app-padding-left);
+  padding-right: var(--app-padding-right);
+}
+
+.myEvents--selected {
+  color: var(--primary-color);
+}

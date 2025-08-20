@@ -1,0 +1,51 @@
+@import "src/sass/utils";
+
+.AppHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 40px var(--app-padding-right) 10px var(--app-padding-left);
+  position: relative;
+  z-index: 99;
+  @include prevent-tab-highlights;
+  transition: background 0.5s;
+
+  @include desktopDown {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: var(--app-padding-x-tablet);
+    padding-right: 32px;
+    transition: unset;
+  }
+
+  @include phone {
+    padding: var(--app-padding-x-phone);
+    padding-bottom: 32px;
+    .HeaderLogo {
+      margin-right: 1rem;
+    }
+  }
+
+  &--search {
+    background-color: $header-search-background;
+
+    @include desktopDown {
+      padding-bottom: 64px;
+    }
+  }
+
+  &__Left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 auto;
+  }
+
+  &__Right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

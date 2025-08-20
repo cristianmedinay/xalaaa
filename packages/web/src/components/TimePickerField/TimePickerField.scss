@@ -1,0 +1,51 @@
+.time-picker {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    font-size: 15px;
+    color: var(--primary-color);
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  & ~ .Error {
+    li {
+      position: relative;
+      top: 18px;
+    }
+  }
+
+  .rc-time-picker-input {
+    &:focus {
+      outline: none;
+    }
+    cursor: pointer;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .rc-time-picker {
+    &.FormInputError {
+      height: 40px;
+      border-color: transparent;
+      padding: 0;
+    }
+  }
+
+  .rc-time-picker-clear {
+    display: none;
+  }
+}
+
+.rc-time-picker-panel-select {
+  li {
+    color: #000;
+  }
+}
+.rc-time-picker-input {
+  color: #fff;
+}

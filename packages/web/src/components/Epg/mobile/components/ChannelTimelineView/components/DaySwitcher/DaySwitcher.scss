@@ -1,0 +1,42 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-mobile-day-switcher {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10px 25px 10px;
+  font-weight: 500;
+  font-size: 20px;
+  background: $background-contrast-color;
+
+  &-dropdown {
+    display: none;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+
+    @include largeDown() {
+      display: flex;
+    }
+
+    &-current-date {
+      flex-shrink: 0;
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+    & input {
+      caret-color: transparent;
+      cursor: pointer;
+    }
+
+    & .InputSelect-selection-item, & .InputSelect-selection-placeholder {
+      padding: 20px !important;
+    }
+  }
+}

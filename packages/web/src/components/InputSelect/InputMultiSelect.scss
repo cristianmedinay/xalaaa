@@ -1,0 +1,120 @@
+.InputMultiSelect {
+  width: 100%;
+
+  &__selectIcon {
+    border: 1px solid var(--primary-text-color);
+    width: 19px;
+    height: 19px;
+    border-radius: 2px;
+    margin-right: 10px;
+
+    &--checked {
+      background-color: var(--primary-color);
+    }
+  }
+
+  .InputSelect-arrow {
+    background-color: var(--bg-color);
+    height: 100%;
+  }
+
+  .InputSelect-open {
+    .InputSelect-arrow {
+      background-color: var(--cell-background-color);
+    }
+  }
+
+  .InputSelect__container {
+    .FormInputError {
+      height: auto;
+    }
+  }
+
+  .FormInput,
+  .LabelField {
+    height: auto;
+  }
+
+  .InputSelect-selection-item {
+    line-height: 54px;
+  }
+
+  .InputSelect-selection-search {
+    position: relative;
+    display: block;
+    padding-right: 0;
+    height: 54px;
+
+    &-input {
+      cursor: pointer;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+      width: fit-content;
+    }
+
+    input::-webkit-search-cancel-button {
+      display: none;
+    }
+
+    .InputSelect-selection-search-mirror {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+}
+
+.InputSelect-selector {
+  display: flex;
+  width: 100%;
+  padding-right: 36px;
+
+  & > .InputSelect-selection-overflow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.InputSelect-multiple {
+  .RegisterForm__optionLogo {
+    display: none;
+  }
+}
+
+.InputMultiSelect__dropdown {
+  z-index: 999;
+
+  .InputSelect-item-option {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+
+  .InputSelect-item-option-selected {
+    svg {
+      color: var(--primary-color);
+    }
+  }
+
+  .InputSelect-item-option-content {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .InputSelect-item-option-active {
+    text-decoration: none;
+  }
+
+  .rc-virtual-list-holder {
+    max-height: 400px !important;
+  }
+
+  .rc-virtual-list-holder-inner {
+    padding: 10px;
+  }
+}

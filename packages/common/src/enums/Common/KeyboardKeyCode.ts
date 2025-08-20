@@ -1,0 +1,41 @@
+/*
+ * @author BSG <dev@bsgroup.eu>
+ * @copyright Better Software Group S.A.
+ * @version: 1.0
+ */
+export enum KeyboardKeyCode {
+  Left = "left",
+  IMELeft = 37,
+  IMEDone = 65376,
+  IMECancel = 65385,
+  IMERight = 39,
+  IMEUp = 38,
+  IMEDown = 40,
+  ArrowLeft = "ArrowLeft",
+  ArrowDown = "ArrowDown",
+  ArrowUp = "ArrowUp",
+  ArrowRight = "ArrowRight",
+  Right = "right",
+  Up = "up",
+  Down = "down",
+  Enter = "enter",
+  Back = "back",
+  ESC = "esc",
+  Rewind = "rewind",
+  FastForward = "fastForward",
+  Play = "play",
+  Pause = "pause",
+  Stop = "stop",
+  PlayPause = "playPause",
+  Undefined = "undefined",
+  Zero = "0",
+  One = "1",
+  Two = "2",
+  Three = "3",
+  Four = "4",
+  Five = "5",
+  Six = "6",
+  Seven = "7",
+  Eight = "8",
+  Nine = "9",
+}

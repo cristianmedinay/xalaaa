@@ -1,0 +1,42 @@
+/*
+ * @author BSG <dev@bsgroup.eu>
+ * @copyright Better Software Group S.A.
+ * @version: 1.0
+ */
+export enum ComponentType {
+  Custom = "CUSTOM",
+  ApplicationMenuItem = "APPLICATION_MENU_ITEM",
+  ApplicationHeaderItem = "APPLICATION_HEADER_ITEM",
+  ApplicationFooterItem = "APPLICATION_FOOTER_ITEM",
+  Action = "ACTION",
+  Banner = "BANNER",
+  Grid = "GRID",
+  List = "LIST",
+  ListCell = "LIST_CELL",
+  Image = "IMAGE",
+  Tabs = "TABS",
+  TabsItem = "TABS_ITEM",
+  Epg = "EPG",
+  Button = "BUTTON",
+  SourceFilter = "SOURCE_FILTER",
+  SourceFilterItem = "SOURCE_FILTER_ITEM",
+  WebView = "WEB_VIEW",
+  TextWidget = "TEXT_WIDGET",
+  PlaylistWidget = "PLAY_LIST_WIDGET",
+  TopFriendsWidget = "TOP_FRIENDS_WIDGET",
+  InfoBoxWidget = "INFO_BOX_WIDGET",
+  QuestionAnswerWidget = "QUESTION_ANSWER_WIDGET",
+  PollWidget = "POLL_WIDGET",
+  FeedWidget = "FEED_WIDGET",
+  MediaWidget = "MEDIA_WIDGET",
+  MemeWidget = "MEME_WIDGET",
+  InstagramWidget = "INSTAGRAM_WIDGET",
+  SpotifyArtistWidget = "SPOTIFY_ARTIST_WIDGET",
+  SpotifyAnthemWidget = "SPOTIFY_ANTHEM_WIDGET",
+  AstronomyWidget = "ASTRONOMY_WIDGET",
+  FileRequestWidget = "FILE_REQUEST_WIDGET",
+  SocialLinksWidget = "SOCIAL_LINKS_WIDGET",
+  CreatorActivitiesWidget = "CREATOR_ACTIVITIES_WIDGET",
+  SectionMenu = "SECTION_MENU",
+  SectionMenuItem = "SECTION_MENU_ITEM",
+}

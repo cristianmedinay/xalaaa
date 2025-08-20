@@ -1,0 +1,56 @@
+@import "src/sass/utils";
+
+.Banner_container {
+  padding-top: var(--app-padding-top);
+  font-size: 42px;
+  font-weight: 400;
+  padding-left: var(--app-padding-left);
+  padding-right: var(--app-padding-left);
+  @include display-flex();
+  gap: 20px;
+  @include phone {
+    padding-left: var(--app-padding-x-phone);
+    padding-right: var(--app-padding-x-phone);
+    @include flex-direction(column);
+  }
+  @include tablet {
+    padding-left: var(--app-padding-x-tablet);
+    padding-right: var(--app-padding-x-tablet);
+  }
+}
+
+.Banner_component__item {
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: flex-end;
+  transition: all 0.2s;
+  -webkit-transition: transform 0.2s;
+  max-width: 1000px;
+  width: calc(50% - 10px);
+  &:hover {
+    transform: scale(1.05);
+    z-index: 999;
+  }
+  @include tabletDown {
+    width: 100%;
+  }
+}
+
+.Banner_component_image-wrapper {
+  position: relative;
+}
+
+.Banner_component__image {
+  display: flex;
+  img {
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 889 / 424;
+    @include phone {
+      aspect-ratio: 382 / 182;
+    }
+    @include tablet {
+      aspect-ratio: 453 / 216;
+    }
+  }
+}

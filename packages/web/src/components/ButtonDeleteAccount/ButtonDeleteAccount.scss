@@ -1,0 +1,54 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.ModalOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: $overlay-menu;
+}
+
+
+.ModalContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &_content {
+    width: 40%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 10px;
+
+    h2 {
+      text-align: center;
+    }
+
+    .MediaButton {
+      border-radius: 70px;
+    }
+
+    button {
+      margin-right: 0;
+      margin-left: 0;
+
+      .MediaButton__text {
+        margin-left: 0;
+        padding: 0 40px;
+      }
+    }
+  }
+}

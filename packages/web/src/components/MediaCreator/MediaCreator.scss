@@ -1,0 +1,105 @@
+@import "src/sass/utils";
+
+.media-steps {
+  padding-bottom: 50px;
+}
+
+//override styles for form inputs
+
+.media-creator {
+  padding-left: var(--app-padding-left);
+  padding-right: var(--app-padding-right);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  
+  .step-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    form {
+      height: 100%;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .rc-steps {
+    margin-bottom: 20px;
+  }
+
+  .LabelField {
+    padding: 10px 0;
+    align-items: flex-start;
+    .FormInput,
+    .FormInputError {
+      background-color: transparent !important;
+      margin-bottom: 14px;
+    }
+
+    .FormInput {
+      border: 1px solid;
+      border-color: rgba(240, 240, 240, 0.43);
+      &:focus,
+      &:focus-within {
+        border: 1px solid;
+        border-color: rgba(255, 255, 255, 0.87);
+      }
+    }
+
+    .Input__input,
+    .rc-textarea {
+      color: rgba(255, 255, 255, 0.87);
+    }
+
+    .rc-textarea {
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+      }
+      padding: 0;
+    }
+  }
+
+  .DatePicker__input {
+    &:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.87);
+    }
+    text-align: left;
+    border-radius: 20px;
+    padding: 13px;
+    color: #fff;
+    margin: 15px 0;
+    background-color: transparent;
+    border-color: rgba(240, 240, 240, 0.43);
+  }
+
+  .Calendar__day.-selected {
+    background: #ffa726 !important;
+  }
+
+  .rc-time-picker-input {
+    color: rgba(255, 255, 255, 0.87);
+    border-color: rgba(240, 240, 240, 0.43);
+    &:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.87);
+    }
+  }
+
+  .Select {
+    &.categories-select {
+      width: 100%;
+      padding-top: 18px;
+    }
+    padding-top: 10px;
+    .Select-arrow {
+      top: 60% !important;
+    }
+  }
+}

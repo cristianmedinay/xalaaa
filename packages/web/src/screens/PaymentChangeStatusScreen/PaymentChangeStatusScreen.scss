@@ -1,0 +1,15 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.PaymentChangeStatus {
+  &__content {
+    max-width: 721px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding-left: var(--app-padding-left);
+    padding-right: var(--app-padding-right);
+    text-align: center;
+  }
+}

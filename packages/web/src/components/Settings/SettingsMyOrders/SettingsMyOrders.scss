@@ -1,0 +1,35 @@
+@import "src/sass/variables";
+
+.SettingsMyOrders {
+  &__loader {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Table {
+
+    .MediaButton {
+      margin: 0;
+    }
+
+    &__Column {
+    }
+  }
+
+  .SettingsMyOrders__actions {
+    display: flex;
+    justify-content: center;
+
+    div:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__EmptyList {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--primary-text-color);
+  }
+}

@@ -1,0 +1,12 @@
+@import "src/screens/MediaDetailsScreen/DetailsScreenSharedStyles.scss";
+
+.MediaPeople {
+  @extend %details-text;
+
+  &__skeleton {
+    background: var(--cell-background-color);
+    height: 1.25rem;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+}

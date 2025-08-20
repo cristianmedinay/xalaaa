@@ -1,0 +1,79 @@
+.ExpandedDetails {
+  display: flex;
+  flex-direction: row;
+
+  &:before {
+    content: '';
+    flex: 1;
+  }
+
+  & > div {
+    flex: 10;
+    margin-bottom: 32px;
+  }
+
+  &:after {
+    content: '';
+    flex: 1;
+  }
+}
+
+.Section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+
+  &__Title {
+    color: var(--primary-text-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &__HorizontalLine {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-top: 0.6px solid #9E9E9E;
+  }
+
+  &__HeadersRow > * {
+    flex: 1;
+  }
+
+  &__HeadersRow {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #B6B7BC;
+  }
+
+  &__DetailsRow > * {
+    margin-bottom: 16px;
+    flex: 1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__DetailsRow {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__BillingsExpandButton {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--primary-color);
+  }
+}

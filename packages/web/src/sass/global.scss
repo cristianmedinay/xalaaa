@@ -1,0 +1,20 @@
+@import "./normalize.scss";
+// Fix to pass Lighthouse and still not display labels for some fields
+.label--hidden {
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+}
+
+// disable autocomplete background
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+.text--shadow {
+  text-shadow: 0 0 2px #000;
+}

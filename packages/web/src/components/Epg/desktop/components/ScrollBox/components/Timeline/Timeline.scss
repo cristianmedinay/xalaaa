@@ -1,0 +1,59 @@
+@import "src/sass/utils";
+@import "src/sass/epg";
+
+.epg-desktop-timeline {
+  position: sticky;
+  display: flex;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  background: $background-contrast-color;
+  margin-left: $epg-desktop-sidebar-width;
+
+  &.fixed-epg {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+  }
+
+  @include largeDown() {
+    margin-left: $epg-desktop-sidebar-width-tablet;
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    &-time {
+      position: absolute;
+      padding: 5px 20px;
+      border-radius: 55px;
+      font-size: 28px;
+      font-weight: 400;
+      cursor: pointer;
+      color: $text-color;
+
+      @include largeDown() {
+        padding: 2px 15px;
+        font-size: 20px;
+      }
+
+      &-full-hour {
+        font-weight: 500;
+        background: $active-color;
+
+        &-align {
+          transform: translateX(-50%);
+        }
+      }
+
+      &-half-hour {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

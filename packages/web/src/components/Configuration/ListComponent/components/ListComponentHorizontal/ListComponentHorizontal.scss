@@ -1,0 +1,186 @@
+@import "src/sass/utils";
+
+$container-padding: 0 43px 0 150px;
+$container-padding-desktop: 0 50px 12px 70px;
+
+.ListComponentHorizontal {
+  &:not(:first-of-type) {
+    @include main-size('margin-top');
+  }
+  &:last-of-type {
+    padding-bottom: var(--app-padding-bottom);
+  }
+
+  &-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: var(--app-padding-left);
+    padding-right: var(--app-padding-right);
+    @include half-size("margin-bottom");
+
+    .ListComponentHorizontal-title:first-child {
+      .react-loading-skeleton {
+        @include phone {
+          width: 10rem !important;
+        }
+      }
+    }
+  }
+
+  &-title {
+    @include text-style();
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    margin: 0;
+    z-index: 10;
+  }
+
+  &-see-all {
+    @include text-style();
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    margin: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+    span{
+      @include phone {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 8px;
+      height: 16px;
+      margin-left: 12px;
+      margin-bottom: 2px;
+    }
+  }
+
+  &-container {
+    position: relative;
+  }
+
+  &-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  &.ListComponentHighlight {
+    .slick-list {
+      overflow: hidden;
+    }
+  }
+
+  .slider {
+    overflow: hidden;
+  }
+
+  .slick-list {
+    margin: 0 0 0 calc(var(--app-padding-left) - 10px);
+    overflow: visible;
+  }
+
+  &.ListComponentLandscape {
+    .slick-list {
+      margin: 0 calc(var(--app-padding-left) - 12.5px);
+
+      @include desktopDown {
+        margin: 0 calc(var(--app-padding-x-tablet) - 12.5px);
+      }
+      @include phone {
+        margin: 0 calc(var(--app-padding-x-phone) - 12.5px);
+      }
+    }
+  }
+
+  &.ListComponentHighlight {
+    .slick-list {
+      margin: 0 !important;
+    }
+    &:first-of-type {
+      margin-top: -164px;
+    }
+  }
+
+  .slick-track {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .slick-dots {
+    bottom: 4px;
+    text-align: right;
+    box-sizing: border-box;
+    padding: $container-padding;
+    margin-bottom: 59px;
+
+    @include phone {
+      margin-bottom: 24px;
+      padding-right: var(--app-padding-right);
+    }
+
+    & > li,
+    & > li > button {
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+
+    & > li > button:before {
+      position: relative;
+      display: inline-block;
+      opacity: 0.6;
+      width: 27px;
+      height: 8px;
+      padding: 0;
+      margin: 4px;
+      border-radius: 20px;
+      font-size: 0;
+      border: 0;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      background-color: var(--primary-text-color);
+      box-shadow: $text-shadow;
+
+      @include phone {
+        width: 15px;
+        height: 5px;
+      }
+    }
+
+    .slick-active > button:before {
+      opacity: 1;
+      background-color: var(--primary-text-color);
+      width: 53px;
+      border-radius: 20px;
+
+      @include phone {
+        width: 30px;
+        height: 5px;
+      }
+    }
+  }
+}
+
+.load-item-spinner {
+  position: relative;
+  width: 350px;
+  height: 200px;
+  display: inline-block;
+  margin-right: 2px;
+
+  .load-item-spinner-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

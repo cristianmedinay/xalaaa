@@ -1,0 +1,104 @@
+@import "src/sass/utils";
+$category-drawer-padding: 0 40px 0 70px;
+
+.MediaCategoryDrawer {
+  .drawer-body {
+    padding: 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  &__trigger {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    &__icon {
+      font-size: 1.75rem;
+      margin-right: 14px;
+      @include tablet {
+        font-size: 20px;
+      }
+      @include phone {
+        font-size: 17px;
+      }
+
+      svg {
+        display: block;
+      }
+    }
+
+    &__text {
+      @include text-style();
+    }
+  }
+}
+
+.MediaCategoryList {
+  overflow: auto;
+  padding: $category-drawer-padding;
+
+
+  @include phone {
+    padding: 0 20px 0 70px;
+  }
+}
+
+.MediaCategory {
+  display: inline-block;
+  opacity: 0.87;
+  font-size: 1.1875rem;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  padding: 15px 0;
+  padding-right: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 50%;
+  box-sizing: border-box;
+  @include tablet {
+    font-size: 17px;
+  }
+  @include phone {
+    font-size: 15px;
+    width: 100%;
+  }
+  @include tabletDown {
+    padding-right: 0;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  &__indicator {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+  }
+
+  &__name {
+    @include text-style();
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &--active {
+    .MediaCategory__name {
+      font-weight: 700;
+      position: relative;
+    }
+  }
+}

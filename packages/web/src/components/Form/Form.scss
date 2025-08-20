@@ -1,0 +1,44 @@
+@import "../../sass/variables";
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-link {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &-underline {
+    text-decoration: underline;
+  }
+
+  &-upper {
+    text-transform: uppercase;
+  }
+
+  &-bold {
+    font-weight: bold;
+  }
+
+  &-small {
+    font-size: 14px;
+    letter-spacing: 0.52px;
+  }
+
+  &-normal {
+    font-size: 16px;
+    letter-spacing: 0.6px;
+  }
+
+  &-large {
+    font-size: 22px;
+    letter-spacing: 0.82px;
+  }
+}
+
+.Error {
+  text-align: center;
+  color: $error-color;
+}

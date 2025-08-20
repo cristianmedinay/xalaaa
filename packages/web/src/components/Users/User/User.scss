@@ -1,0 +1,19 @@
+.user {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow: visible;
+    padding: 8px;
+    &__info {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        &__name {
+            color: var(--primary-text-color)
+        }
+
+        &__email {
+            color: var(--primary-text-color-d-30)
+        }
+    }
+}

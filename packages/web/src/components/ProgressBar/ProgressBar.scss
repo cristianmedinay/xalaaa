@@ -1,0 +1,32 @@
+@import "src/sass/utils";
+
+.ProgressBar {
+  &-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 8px;
+    background-color: var(--primary-text-color);
+
+    &.hidden {
+      background: transparent;
+    }
+  }
+
+  &-bar {
+    @include transition-transform(2s ease-out);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--primary-color);
+  }
+
+  &-buffored {
+    @include transition-transform(2s ease-out);
+    position: absolute;
+    background: grey;
+    height: 100%;
+    z-index: 9;
+  }
+}

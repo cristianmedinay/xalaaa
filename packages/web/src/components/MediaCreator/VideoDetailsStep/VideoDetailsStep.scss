@@ -1,0 +1,134 @@
+.video-details-section {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 32px;
+
+  &__form {
+    flex-basis: 60%;
+    flex: 3;
+    .LabelField {
+      padding: 0;
+    }
+    .Title {
+      padding: 5px !important;
+      padding-left: 15px !important;
+      font-size: 14px !important;
+      height: 42px !important;
+    }
+
+    .Description {
+      margin: 10px 0 10px 0;
+      padding: 0 10px 0 10px;
+      width: calc(100% - 2 * 11px);
+      color: var(--primary-text-color);
+      border-radius: 15px;
+      min-height: 72px;
+      border: solid 1px rgba(255, 255, 255, 0.44);
+
+      textarea {
+        min-height: 72px !important;
+        height: unset !important;
+        max-height: unset !important;
+        overflow-y: scroll;
+        letter-spacing: 0.6px;
+        font-size: 14px;
+        border: none !important;
+        border-radius: 0 !important;
+        overflow-y: scroll;
+      }
+    }
+
+    .FormInputError {
+      margin: 10px 0 10px 0;
+      border-radius: 15px;
+      padding: 0 10px 0 10px;
+      width: calc(100% - 2 * 10px);
+      letter-spacing: 0.6px;
+      font-size: 14px;
+      color: var(--primary-text-color);
+      min-height: 72px !important;
+      height: unset !important;
+
+      textarea {
+        min-height: 72px !important;
+        height: unset !important;
+        max-height: unset !important;
+        overflow-y: scroll;
+        letter-spacing: 0.6px;
+        font-size: 14px;
+        border: none !important;
+        border-radius: 0 !important;
+      }
+    }
+  }
+
+  &__video-preview {
+    flex-basis: 40%;
+    flex: 2;
+  }
+
+  .preview-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .preview-container {
+    background-color: #191919;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    overflow: hidden;
+    h4 {
+      color: #fff;
+      opacity: 0.5;
+      font-size: 12px;
+    }
+
+    .player-container {
+      div {
+        width: unset !important;
+        height: unset !important;
+      }
+    }
+    .loader-container {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .broadcast-date-time-section {
+    display: flex;
+    gap: 30px;
+    margin: 16px 0 16px 0;
+    margin-top: 30px;
+
+    .available-to-container {
+      .available-to-info {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        font-size: small;
+        color: yellow;
+        opacity: 0.8;
+      }
+    }
+  }
+  .Error {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.media-creator-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

@@ -1,0 +1,71 @@
+@import "src/sass/theme";
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.rc-notification {
+  bottom: 5%;
+  left: 5% !important;
+  top: inherit !important;
+  min-width: 200px;
+}
+
+.rc-notification-notice {
+  background: $background-notification;
+  border: 1px solid $primary-text;
+  border-radius: 8px;
+  padding: 0.58rem 0;
+  padding-left: 0.8rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.Message {
+  &__container {
+    display: flex;
+    align-items: center;
+    span {
+      color: $primary-text;
+      font: 400 0.9rem/1.3rem Arial;
+      letter-spacing: 0.05rem;
+      white-space: nowrap;
+      padding-left: 0.4rem;
+    }
+  }
+  &__icon {
+    font-size: 2rem;
+    padding: 5px;
+    svg {
+      display: block;
+    }
+
+    &--success {
+      color: $primary-notification;
+    }
+
+    &--error {
+      color: red;
+    }
+
+    &--info {
+      color: $primary-notification;
+    }
+
+    &--warning {
+      color: yellow;
+    }
+  }
+}
+
+@include tabletDown {
+  .rc-notification {
+    bottom: 10%;
+  }
+}
+
+@include phone {
+  .rc-notification {
+    bottom: 10%;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,82 @@
+@import "../MediaDetailsScreen/DetailsScreenSharedStyles.scss";
+
+.SeriesDetails {
+  &__info-container {
+    @extend %info-container;
+    position:relative;
+
+    & > .mute-button {
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+      border: none;
+      background-color: white;
+      color: black;
+      font-size: 28px;
+
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: $tablet-max-width) {
+        display: none;
+      }
+
+      &> .MediaButton__icon {
+        padding: 0;
+        margin: 0;
+        width: auto;
+      }
+    }
+  }
+
+  &__info {
+    @extend %info;
+
+    &--flex-end {
+      justify-content: flex-end;
+    }
+  }
+
+  &__main-info {
+    @extend %main-info;
+  }
+
+  &__genres {
+    @extend %genres;
+    span {
+      @include largeDown() {
+        @include line-clamp-ellipsis(1);
+      }
+    }
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__actions {
+    @extend %actions;
+  }
+
+  &__details {
+    &-container {
+      @extend %details-container;
+    }
+
+    &__description,
+    &__people {
+      @extend %details;
+      &-header {
+        @extend %details-header;
+      }
+
+      &-text {
+        @extend %details-text;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.EditFavoriteContentsContainer {
+  margin: -10% auto 150px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  max-width: 591px;
+}

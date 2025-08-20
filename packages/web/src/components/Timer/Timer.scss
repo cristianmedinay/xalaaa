@@ -1,0 +1,10 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.Timer {
+  font-size: 1.375rem;
+  letter-spacing: 0.83px;
+  text-align: center;
+  color: var(--primary-text-color);
+  margin-top: 1rem;
+}

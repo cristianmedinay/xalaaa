@@ -1,0 +1,36 @@
+@import "src/sass/utils";
+
+.epg-mobile-channel-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5px;
+  margin-bottom: 15px;
+
+  &-button {
+    flex-shrink: 0;
+    margin: 0;
+    cursor: pointer;
+    padding-right: 10px;
+
+    svg {
+      width: 15px;
+    }
+  }
+
+  &-logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 22px;
+    padding-left: 15px;
+
+    @include line-clamp-ellipsis(1);
+    @include ellipsis();
+  }
+}

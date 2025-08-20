@@ -1,0 +1,53 @@
+@import "src/sass/utils.scss";
+
+.AdditionalDetailsContainer {
+  background-color: var(--cell-background-color);
+  padding-left: 19px;
+  padding-right: 22px;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  aspect-ratio: 2.5/1;
+
+  &_Date {
+    @include text-style();
+    text-transform: lowercase;
+    margin: 0;
+    @include half-size('margin-top');
+  }
+
+  &_Description {
+    @include text-style();
+    display: -webkit-box;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 0;
+    @include half-size('margin-top');
+    line-height: 1.2em;
+
+    @media screen and (min-width: 680px) {
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+
+    @media screen and (min-width: $tablet-max-width) {
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
+
+    @media screen and (min-width: 1040px) {
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+
+    @media screen and (min-width: 1400px) {
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+    }
+  }
+}
+

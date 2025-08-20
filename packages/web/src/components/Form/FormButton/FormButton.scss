@@ -1,0 +1,35 @@
+@import "src/sass/variables";
+@import "src/sass/utils";
+
+.FormButton {
+  justify-content: center;
+  width: 100%;
+  height: 62px;
+  margin-top: 35px;
+  border-radius: 70px;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.82px;
+  text-align: center;
+  background-color: var(--primary-color);
+
+  @include phone {
+    height: 50px;
+  }
+
+  .MediaButton__text {
+    @include phone {
+      font-size: 14px;
+    }
+  }
+
+  &:hover:not(:disabled), &:focus:not(:disabled) {
+    border: 2px solid white;
+  }
+
+  &:disabled {
+    background-color: $disable-bg;
+    color: $disable-text;
+    cursor: not-allowed;
+  }
+}

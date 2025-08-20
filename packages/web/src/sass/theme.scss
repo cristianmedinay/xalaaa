@@ -1,0 +1,75 @@
+@import "src/sass/utils";
+// default colors
+:root {
+  --primary-color: #ffa000;
+  --primary-color-d-50: scale(#ffa000, $lightness: -50%);
+  --primary-text-color: #ffffff;
+  --primary-text-color-d-30: scale(#ffffff, $lightness: -30%);
+  --secondary-color: #3c4573;
+  --secondary-text-color: #ffffff;
+  --link-color: #0094ff;
+  --link-color-d-50: scale(#0094ff, $lightness: -50%);
+  --link-text-color: #ffffff;
+  --link-text-color-d-30: scale(#ffffff, $lightness: -30%);
+  --bg-color: #000000;
+  --bg-color-o-30: opacify(#000000, 30%);
+  --footer-bg-color: #000000;
+  --footer-link-color: #ffffff;
+  --footer-link-hover-color: #ffffff;
+  --header-bg-color: #000000;
+  --header-link-color: #ffffff;
+  --header-link-hover-color: #ffffff;
+  --font-family: "BR Sonoma", Helvetica, Arial, sans-serif;
+  --cell-background-color: #212640;
+  --app-padding-top: 48px;
+  --app-padding-bottom: 44px;
+  --app-padding-left: 55px;
+  --app-padding-x-tablet: 32px;
+  --app-padding-x-phone: 16px;
+  --app-padding-right: 62px;
+  --watching-progress-container-color: #c4c4c4;
+  --watching-progress-value-color: #f9504b;
+}
+
+@include desktopDown {
+  :root {
+    --app-padding-left: 32px;
+    --app-padding-right: 32px;
+  }
+}
+
+@include phone {
+  :root {
+    --app-padding-left: 16px;
+    --app-padding-right: 16px;
+  }
+}
+
+$variables: (
+  --primary-color: var(--primary-color),
+  --primary-color-d-50: var(--primary-color-d-50),
+  --primary-text-color: var(--primary-text-color),
+  --primary-text-color-d-30: var(--primary-text-color-d-30),
+  --secondary-color: var(--secondary-color),
+  --secondary-text-color: var(--secondary-text-color),
+  --link-color: var(--link-color),
+  --link-color-d-50: var(--link-color-d-50),
+  --link-text-color: var(--link-text-color),
+  --link-text-color-d-30: var(--link-text-color-d-30),
+  --bg-color: var(--bg-color),
+  --bg-color-o-30: var(--bg-color-o-30),
+  --footer-bg-color: var(--footer-bg-color),
+  --footer-link-color: var(--footer-link-color),
+  --footer-link-hover-color: var(--footer-link-hover-color),
+  --header-bg-color: var(--header-bg-color),
+  --header-link-color: var(--header-link-color),
+  --header-link-hover-color: var(--header-link-hover-color),
+  --font-family: var(--font-family),
+  --cell-background-color: var(--cell-background-color),
+  --app-padding-top: var(--app-padding-top),
+  --app-padding-bottom: var(--app-padding-bottom),
+  --app-padding-left: var(--app-padding-left),
+  --app-padding-x-tablet: var(--app-padding-x-tablet),
+  --app-padding-x-phone: var(--app-padding-x-phone),
+  --app-padding-right: var(--app-padding-right),
+);

@@ -1,0 +1,23 @@
+.ContactsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .ButtonLine {
+    width: 100%;
+  }
+  .LabelField {
+    width: 100%;
+    &:nth-child(1), &:nth-child(2) {
+        width: 45%;
+    }
+  }
+}

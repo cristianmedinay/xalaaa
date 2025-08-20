@@ -1,0 +1,123 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+@import "../MediaDetailsScreen/DetailsScreenSharedStyles.scss";
+
+$offer-height: 54px;
+
+.Payment {
+  &__info-container {
+    @extend %info-container;
+  }
+
+  &__info {
+    @extend %info;
+    padding-bottom: 7%;
+    justify-content: flex-end;
+  }
+
+  &__title {
+    opacity: 0.87;
+    font-size: 3.75rem;
+    font-weight: 900;
+    line-height: 1.18;
+    color: var(--primary-text-color);
+    margin-bottom: 0.625rem;
+  }
+
+  &__parentsTitles {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    margin-bottom: 0.5rem;
+  }
+
+  &__form {
+    margin: 50px auto;
+    min-width: 250px;
+    max-width: 721px;
+    padding: 0 var(--app-padding-left);
+  }
+
+  .MediaAdditionalInfo {
+    margin-bottom: 0.625rem;
+  }
+
+  .Payment__offers_title {
+    opacity: 0.87;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.68px;
+    color: var(--primary-text-color);
+    margin-bottom: 1.25rem;
+  }
+
+  &__offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: pointer;
+    min-height: $offer-height;
+    border-radius: $offer-height / 2;
+    padding: 15px 30px 15px 20px;
+    margin-bottom: 1.25rem;
+    border: solid 1px rgba(240, 240, 240, 0.43);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 1px 1px 5px 0px var(--primary-color-d-50);
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+    }
+
+    &__checkbox {
+      padding: unset;
+      padding-right: 15px;
+      width: unset;
+      height: unset;
+      background-color: unset;
+
+      input {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__name {
+      opacity: 0.87;
+      font-size: 1rem;
+      line-height: 1.44;
+      letter-spacing: 0.6px;
+      opacity: 0.87;
+      color: var(--primary-text-color);
+      word-break: break-all;
+    }
+
+    &__price {
+      opacity: 0.87;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.44;
+      letter-spacing: 0.6px;
+      opacity: 0.87;
+      color: var(--primary-text-color);
+      text-align: right;
+    }
+  }
+
+  &__empty {
+    font-size: 3rem;
+  }
+
+  &__actions {
+    display: flex;
+    margin-bottom: 1.875rem;
+  }
+
+  .MediaButton {
+    margin: 0;
+    width: auto;
+  }
+}

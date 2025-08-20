@@ -1,0 +1,126 @@
+@import "src/sass/utils";
+
+$padding: 27px 30px;
+$padding-mobile: 15px;
+
+.MediaInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: $padding;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8);
+
+  @include tabletDown {
+    padding: $padding-mobile;
+  }
+
+  &__content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__data {
+    overflow: hidden;
+  }
+
+  &__title,
+  &__description {
+    cursor: pointer;
+  }
+
+  &__note {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+  }
+
+  &__title-container {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.87;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin-bottom: 5px;
+  }
+
+  &__duration {
+    margin-left: 5px;
+  }
+
+  .MediaAdditionalInfo {
+    opacity: 0.6;
+    font-size: 0.625em;
+    letter-spacing: 0.5px;
+  }
+
+  .Rating {
+    img {
+      width: 9px;
+      margin-right: 5px;
+    }
+  }
+
+  &__description {
+    opacity: 0.6;
+    font-size: 0.75em;
+    line-height: 1.55;
+    letter-spacing: 0.55px;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: unset;
+    word-break: break-word;
+  }
+
+  &__details {
+    opacity: 0.87;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 0.625em;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__actions {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 0.625em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: wrap;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    margin-right: 21px;
+    margin-top: 15px;
+
+    &-icon {
+      margin-right: 10px;
+      font-size: 1rem;
+
+      svg {
+        display: block;
+      }
+    }
+
+    &--watch {
+      color: var(--primary-color);
+    }
+  }
+}

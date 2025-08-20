@@ -1,0 +1,36 @@
+@import "src/sass/utils";
+
+.SectionMenuListComponentItem {
+  @include text-style('main', 'lighter');
+  height: 63px;
+  width: max-content;
+  border-radius: 56px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--primary-text-color);
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  padding: 0 20px;
+  margin-right: 20px;
+
+  /* @include desktopDown {
+    height: 60px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 56px;
+    font-weight: 300;
+    font-size: 26px;
+  }
+
+  @include phone {
+    height: 31px;
+    border: 1px solid var(--primary-text-color);
+    border-radius: 56px;
+    font-size: 18px;
+  } */
+}
+
+.SectionMenuListComponentItem:hover {
+  background-color: rgba(238, 238, 238, 0.2);
+  cursor: pointer;
+  border: 1px solid white;
+}

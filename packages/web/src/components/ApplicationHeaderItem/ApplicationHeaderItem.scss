@@ -1,0 +1,17 @@
+.ApplicationHeaderItem {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 2em;
+  padding: 1em 2em;
+
+  img {
+    height: 2em;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

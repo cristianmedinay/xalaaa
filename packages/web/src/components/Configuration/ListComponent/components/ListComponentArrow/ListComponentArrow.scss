@@ -1,0 +1,59 @@
+@import "src/sass/utils";
+
+.ListComponentArrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3%;
+  height: 120%;
+  top: -10%;
+
+  @include desktopDown {
+    width: 6%;
+
+    &--hide-for-tablet-and-mobile {
+      display: none;
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  svg {
+    font-size: 20px;
+  }
+
+  &--left {
+    z-index: 5;
+    cursor: pointer;
+    left: 0;
+
+    svg {
+      padding-left: 30px;
+
+      @include desktopDown {
+        padding-right: 15px;
+      }
+    }
+  }
+
+  &--right {
+    cursor: pointer;
+    right: 0;
+
+    svg {
+      padding-right: 30px;
+
+      @include desktopDown {
+        padding-right: 15px;
+      }
+    }
+  }
+
+  &.disabled {
+    display: none;
+  }
+}

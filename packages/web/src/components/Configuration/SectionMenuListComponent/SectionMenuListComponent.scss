@@ -1,0 +1,50 @@
+@import "src/sass/utils";
+
+.SectionMenuListComponent {
+  &:not(:first-of-type) {
+    padding-top: 85px;
+  }
+  padding-left: var(--app-padding-left);
+
+  @include desktopDown {
+    padding-left: var(--app-padding-x-tablet);
+  }
+
+  @include phone {
+    padding-left: 0;
+  }
+}
+
+.SectionMenuListComponentItem-background {
+  height: 94px;
+  background: url("../../../resources/SectionMenuBackgroundDesktop.png"),
+    linear-gradient(90deg, rgba(0, 0, 0, 0) 123px, rgba(63, 141, 234, 1) 0);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: max-content;
+  min-width: 1920px;
+
+  @include desktopDown {
+    height: 100px;
+    background: url("../../../resources/SectionMenuBackgroundTablet.png"),
+      linear-gradient(90deg, rgba(0, 0, 0, 0) 102px, rgba(63, 141, 234, 1) 0);
+  }
+  @include phone {
+    height: 55px;
+    background: url("../../../resources/SectionMenuBackgroundPhone.png"),
+      linear-gradient(90deg, rgba(0, 0, 0, 0) 46px, rgba(63, 141, 234, 1) 0);
+  }
+}
+
+.SectionMenuListComponentItem-container {
+  margin-left: 150px;
+  overflow: hidden;
+  @include desktopDown {
+    margin-left: 135px;
+  }
+  @include phone {
+    margin-left: 65px;
+  }
+}

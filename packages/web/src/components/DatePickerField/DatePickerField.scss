@@ -1,0 +1,11 @@
+.date-picker {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    font-size: 15px;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,74 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.ListComponentItemHighlight {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: var(--cell-background-color);
+  overflow: hidden;
+
+  &--skeleton {
+    padding-top: 37.5%;
+  }
+
+  &__BackgroundWithOverlay {
+    height: 100%;
+  }
+
+  &__BackgroundWithOverlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(25, 25, 25, 0.697899) 33%,
+      hsla(0,0%,100%,0) 55%
+    );
+  }
+
+  &__BackroundGradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      @include tablet {
+        width: auto;
+      }
+    }
+  }
+
+  &__BackroundGradient {
+    height: 12%;
+    background: linear-gradient(
+      360deg,
+      rgba(19, 26, 42, 0.8) 0%,
+      rgba(19, 26, 42, 0) 100%
+    );
+  }
+
+  &__Skeleton {
+    position: absolute;
+    width: 70%;
+    bottom: 150px;
+    left: 150px;
+  }
+
+  .MediaAvailabilityDate {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.68px;
+  }
+
+  .MediaStartInfo {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.68px;
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+.vs/
+.idea/
+**/dist/
+.yarn
+.yarnrc
+.env.default
+.bitrise.secrets.yml
+.gitmodules
+.DS_Store
+.well-known
+apple-app-site-association
+assetlinks.json!
+firebase-debug.log

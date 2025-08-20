@@ -1,0 +1,33 @@
+@keyframes populate {
+  0% {
+    transform: matrix(1, 1, -1, 1, 0, 0);
+    filter: opacity(0.8);
+  }
+  50% {
+    transform: var(--reaction-populate-matrix-1);
+    filter: opacity(0.2);
+  }
+  51% {
+    transform: var(--reaction-populate-matrix-1);
+    filter: opacity(1);
+  }
+  100% {
+    transform: var(--reaction-populate-matrix-2);
+    filter: opacity(0);
+  }
+}
+
+.reaction__bubble {
+  width: 20px;
+  height: 20px;
+  left: calc(100vw - 100px);
+  transform: var(--reaction-populate-matrix-2);
+  position: absolute;
+  opacity: 0;
+  animation: populate 3s linear;
+  animation-fill-mode: forwards;
+  transition: left 0.5s ease-out, top 0.5s linear, opacity 0.5s linear;
+  & > img {
+    height: 100%;
+  }
+}

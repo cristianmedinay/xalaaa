@@ -1,0 +1,43 @@
+@import "src/sass/utils";
+@import "src/sass/variables";
+
+.reactions__panel {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000aa;
+  padding: 12px;
+  position: absolute;
+  bottom: 50px;
+  font-size: 12px;
+  width: fit-content;
+  border-radius: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  &__item {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tabletDown {
+      flex-direction: column;
+    }
+  }
+  & > * {
+    margin: 8px;
+  }
+  &__count {
+    display: block;
+    width: 40px;
+    padding-left: 8px;
+    transition: opacity 0.3s;
+    @include tabletDown {
+      text-align: center;
+      padding-left: 0;
+      padding-top: 8px;
+    }
+  }
+}

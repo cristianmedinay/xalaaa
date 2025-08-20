@@ -1,0 +1,33 @@
+.ActionButtons {
+  display: flex;
+  justify-content: flex-end;
+
+  & > * {
+    margin-right: 12px;
+  }
+
+  & > *:last-child {
+     margin-right: 0;
+   }
+
+  &__Button {
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--primary-color);
+    background-color: transparent;
+  }
+
+  &__Button-secondary {
+    cursor: pointer;
+    border: none;
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--primary-color);
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../Select/Select.scss";
+
+.UsersBrowse {
+    padding-top: 10px;
+    .SelectedUser {
+        position: relative;
+        min-width: 200px;
+        border: $select-border;
+        border-radius: 30px;
+        display: inline-block;
+        input {
+            cursor: pointer;
+            padding: $select-padding-vertical $select-padding-horizontal;
+            background-color: rgba(0,0,0,0);
+            border: none;
+            border-radius: 30px;
+            // color: $select-color;
+            font-size: $select-font-size;
+            letter-spacing: $select-letter-spacing;
+            text-shadow: $select-text-shadow;
+            width: calc(100% - (32px + 2*4px));
+            color: var(--primary-text-color);
+        }
+        input:focus {
+            outline: none;
+        }
+
+        .SearchIcon {
+            position: absolute;
+            display: flex;
+            padding-right: 4px;
+            right: 0;
+            top: 0;
+            pointer-events: none;
+  
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            svg {
+                display: block;
+                height: 50%;
+                width: 32px;
+                fill: var(--primary-color);
+            }
+        }
+    }
+}

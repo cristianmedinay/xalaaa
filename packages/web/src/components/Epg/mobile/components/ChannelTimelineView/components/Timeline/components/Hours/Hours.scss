@@ -1,0 +1,36 @@
+@import "src/sass/epg";
+
+.epg-mobile-timeline-hours {
+  flex-shrink: 0;
+  width: 90px;
+
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 14px;
+    color: $text-color;
+
+    &-time {
+      position: absolute;
+      font-size: 16px;
+      font-weight: 400;
+
+      &-full-hour {
+        font-size: 20px;
+        font-weight: 500;
+
+        &-align {
+          transform: translateY(-50%);
+        }
+      }
+
+      &-half-hour {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "src/sass/utils";
+
+.label {
+  position: absolute;
+  top: 5%;
+  right: 4%;
+  width: auto;
+  @include display-flex();
+  @include display-algin(center);
+  padding: 5px 15px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  z-index: 5;
+
+  &__text {
+    @include ellipsis();
+    @include text-style('half', 'lighter');
+    font-style: normal;
+    letter-spacing: 0.2px;
+    text-shadow: $text-shadow;
+    line-height: 1em;
+    transform: translateY(0.05em);
+  }
+
+  &__circle {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 0.84px solid rgba(238, 238, 238, 0.5);
+    background: radial-gradient(50% 50% at 50% 50%, #e52624 0%, #c70802 100%);
+  }
+}
+
+.highlightLabel {
+  position: relative;
+  @include half-size('margin-left');
+
+  * + & {
+    @include main-size('margin-left');
+  }
+}

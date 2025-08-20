@@ -1,0 +1,48 @@
+.StatusTab {
+  &__RootContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__TabsContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__Tab {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-bottom: 1px solid #9E9E9E;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__Tab:last-child {
+  }
+
+  .SelectedTab {
+     font-weight: 700;
+     border-bottom: 3px solid var(--primary-color);
+   }
+
+  .DummyTab {
+    flex: 1;
+    cursor: default;
+  }
+
+  &__Counter {
+    border: 1px solid var(--primary-text-color);
+    margin-left: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
+  }
+}

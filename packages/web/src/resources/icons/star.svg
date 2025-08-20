@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>B728A2FE-5197-40A9-8654-654845F9386C@1,5x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="76.3956117%" y1="15.5662515%" x2="30.8197452%" y2="98.8181396%" id="linearGradient-1">
+            <stop stop-color="#FFDA68" offset="0%"></stop>
+            <stop stop-color="#FFC270" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Asset-Artboard-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Star" fill="url(#linearGradient-1)">
+            <polygon points="9.98609304 16.3636366 3.81434813 19.7347312 4.99304652 12.5946383 9.95732365e-14 7.53799654 6.90022059 6.49627104 9.98609304 0 13.0719655 6.49627104 19.9721861 7.53799654 14.9791396 12.5946383 16.157838 19.7347312"></polygon>
+        </g>
+    </g>
+</svg>

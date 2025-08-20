@@ -1,0 +1,18 @@
+$shadow-color: rgba(0, 0, 0, 0.48);
+$border-color: rgba(22, 29, 44, 1);
+$active-color: var(--primary-color);
+$active-secondary-color: rgba(63, 141, 234, 0.4);
+$text-color: rgba(204, 204, 204, 1);
+$text-hover-color: rgba(238, 238, 238, 1);
+
+$background-color: rgba(42, 47, 54, 1);
+$background-secondary-color: rgba(20, 24, 33, 1);
+$background-contrast-color: rgba(14, 15, 18, 1);
+$loader-overlay-background-color: var(--bg-color);
+
+$epg-transition: "all 0.2s ease-in-out";
+$channel-logo-size: 120px;
+$epg-time-marker-height: 4px;
+
+$epg-desktop-sidebar-width: 400px;
+$epg-desktop-sidebar-width-tablet: 250px;

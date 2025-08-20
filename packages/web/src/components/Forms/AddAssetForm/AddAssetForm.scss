@@ -1,0 +1,42 @@
+.add-asset-form {
+  display: flex;
+  flex-direction: column;
+
+  .Title {
+    margin: 0 !important;
+    padding: 5px !important;
+    padding-left: 15px !important;
+    font-size: 14px !important;
+    height: 42px !important;
+    border: solid 1px rgba(255, 255, 255, 0.22) !important;
+    background-color: var(--bg-color) !important;
+    input {
+      letter-spacing: 0.6px;
+      font-size: 14px;
+      letter-spacing: 0.9px;
+      color: var(--primary-text-color);
+    }
+  }
+
+  label {
+    font-size: 12px !important;
+  }
+
+  .upload {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  .Error {
+    margin-top: 0 !important;
+  }
+
+  .MediaButton {
+    margin-top: 24px !important;
+  }
+}

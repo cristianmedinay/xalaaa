@@ -1,0 +1,16 @@
+@import "src/sass/epg";
+
+.epg-mobile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 0;
+
+  &-loader {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+  }
+}

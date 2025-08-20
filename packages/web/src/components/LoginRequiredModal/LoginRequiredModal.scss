@@ -1,0 +1,11 @@
+.LoginRequiredModal {
+  .Dialog-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MediaButton {
+    padding: 1.5rem;
+  }
+}

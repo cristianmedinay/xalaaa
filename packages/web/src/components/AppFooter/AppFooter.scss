@@ -1,0 +1,60 @@
+@import "src/sass/utils";
+
+.AppFooter {
+  color: var(--footer-link-color);
+  position: relative;
+  margin-top: auto;
+  background-repeat: repeat-x;
+  background-size: 972px 200px; //1915 × 394 px
+
+  &__Wrapper {
+    background-color: var(--primary-color);
+    margin-top: 80px;
+  }
+
+  &__Content {
+    @include prevent-tab-highlights;
+    padding: 0 20px 50px 20px;
+
+    &__LanguageSelector {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .Row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
+      font-size: 16px;
+      letter-spacing: 0.6px;
+
+      &__Justify {
+        justify-content: center;
+      }
+
+      &__FitToContent {
+        justify-content: space-around;
+      }
+
+      &:nth-of-type(2) {
+        @include phone() {
+            text-align: center;
+            display: block;
+            width: 100%;
+            font-size: 16px;
+        }
+      }
+
+      .Icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+
+    a:hover {
+      color: var(--footer-link-hover-color);
+    }
+  }
+}
