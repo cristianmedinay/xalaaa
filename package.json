@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@didomi/react": "^1.8.2",
+    "@xala/common": "workspace:*",
     "babel-plugin-transform-imports": "^2.0.0",
     "base-64": "^0.1.0",
     "core-js": "2",
@@ -66,8 +67,5 @@
     "semantic-release-jira-releases": "^0.7.2",
     "shelljs": "^0.8.4",
     "typescript": "4.8.4"
-  },
-  "resolutions": {
-    "**/lodash": "4.17.20"
   }
 }

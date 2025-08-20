@@ -8,5 +8,5 @@ import { useRouteMatch } from "react-router";
 export const useIdRouteParam = (): number => {
   const { params } = useRouteMatch<{ id: string }>();
 
-  return +params.id ?? -1;
+  return params.id ? Number(params.id) : -1;
 };

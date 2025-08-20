@@ -11,20 +11,27 @@ import { AudioActionTypes, IAudioState } from "./types";
 
 const initialState: IAudioState = {};
 
-export const audioReducers = createReducers(initialState, {
+export const audioReducers = createReducers<
+  IAudioState,
+  unknown,
+  AudioActionTypes
+>(initialState, {
   [ActionTypes.SET_AUDIO_SOURCE]: (
     state,
-    action: IPayloadAction<string | undefined>
+    action: IPayloadAction<unknown>
   ) =>
     ({
       ...state,
-      audioSource: action.payload,
+      audioSource: action.payload as string | undefined,
     } as IAudioState),
   [ActionTypes.SET_AUDIO_ERROR]: (state, action: IPayloadAction<unknown>) => ({
     ...state,
     error: action.error,
   }),
-  [ActionTypes.SET_AUDIO_MEDIA]: (state, action: AudioActionTypes) =>
+  [ActionTypes.SET_AUDIO_MEDIA]: (
+    state,
+    action: IPayloadAction<unknown>
+  ) =>
     ({
       ...state,
       media: (action.payload as ISetAudioMediaPayload)?.media,
@@ -33,6 +40,6 @@ export const audioReducers = createReducers(initialState, {
   [ActionTypes.RESET_AUDIO_STORE]: () => ({}),
   [ActionTypes.SET_IS_BOTTOM_MENU_VISIBLE]: (
     state,
-    action: AudioActionTypes
+    action: IPayloadAction<unknown>
   ) => ({ ...state, isBottomMenuVisible: action.payload as boolean }),
 });
