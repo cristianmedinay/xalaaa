@@ -10,14 +10,12 @@ Available environments:
 - `prod`
 - `staging`
 
-### Workspaces
+### Project structure
 
 ---
 
-Workspaces are located in folder packages/
-
-- common - project which contains reusable fragments of application for all other workspaces
-- web - frontend part of application for web browsers
+- `packages/common` – shared library published as `@xala/common`
+- `src` – web application source code
 
 ### How do I get set up?
 

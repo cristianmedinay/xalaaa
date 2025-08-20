@@ -20,3 +20,4 @@ export * from "./purchaseHelper";
 export * from "./downloadHelper";
 export * from "./makeGridHelper";
 export * from "./executionHelper";
+export * from "./firebaseConfig";

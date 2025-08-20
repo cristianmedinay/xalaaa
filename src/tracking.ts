@@ -6,7 +6,7 @@
 import { logEvent } from "firebase/analytics";
 import ReactGA from "react-ga";
 
-import { firebaseAnalytics } from "../../common/src/helpers/firebaseConfig";
+import { firebaseAnalytics } from "@xala/common";
 
 const trackingId = process.env.REACT_APP_GA_TRACKING_ID;
 const trackingEnabled = trackingId !== undefined && trackingId.length > 0;
