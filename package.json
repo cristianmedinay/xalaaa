@@ -2,24 +2,9 @@
   "name": "xala",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "android": "yarn workspace mobile android",
     "compile": "tsc -b --incremental",
-    "ios": "yarn workspace mobile ios",
-    "studio": "yarn workspace mobile studio",
-    "xcode": "yarn workspace mobile xcode",
     "clean": "node scripts/clean.js",
-    "compile:common": "tsc -b ./packages/common",
-    "compile:web": "tsc -b ./packages/web",
-    "compile:smarttv": "tsc -b ./packages/smarttv",
-    "compile:mobile": "tsc -b ./packages/mobile",
-    "lint:common": "yarn eslint ./packages/common/src",
-    "lint:web": "yarn eslint ./packages/web/src",
-    "lint:smarttv": "yarn eslint ./packages/smarttv/src",
-    "lint:mobile": "yarn eslint ./packages/mobile/src",
     "release:version": "npx multi-semantic-release"
   },
   "dependencies": {

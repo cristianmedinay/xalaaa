@@ -3,9 +3,9 @@
  * @copyright Better Software Group S.A.
  * @version: 1.0
  */
-const { exec, log } = require("./_helpers");
+const { exec, log } = require("./utils");
 
-// All folders to remove
+// Folders to remove
 const FOLDERS_TO_REMOVE = [
   "dist",
   "build",
@@ -13,11 +13,9 @@ const FOLDERS_TO_REMOVE = [
   "tsconfig.tsbuildinfo",
 ];
 
-const toPathModel = (path) => `${path} packages/**/${path}`;
-
-// Removes all node_modules, dist and build folders, and cleans yarn cache
+// Removes all node_modules, dist and build folders
 const main = () => {
-  const pathsToRemove = FOLDERS_TO_REMOVE.map(toPathModel).join(" ");
+  const pathsToRemove = FOLDERS_TO_REMOVE.join(" ");
 
   const script = `rimraf ${pathsToRemove}`;
 
