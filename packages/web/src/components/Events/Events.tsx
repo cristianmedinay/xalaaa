@@ -3,7 +3,7 @@
  * @copyright Better Software Group S.A.
  * @version: 1.0
  */
-import { configurationSelector } from "@xala/common/src/store/configuration/selectors";
+import { configurationSelector } from "@xala/common";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";

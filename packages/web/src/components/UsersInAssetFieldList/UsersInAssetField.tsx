@@ -7,8 +7,8 @@ import {
   IUserInAssetRoleModel,
   IUserModel,
   UserInAssetRoles,
+  IUsersListModel,
 } from "@xala/common";
-import { IUsersListModel } from "@xala/common/src/providers/DataProvider/Internal/models";
 import { ListField } from "rc-field-form/lib/List";
 import React from "react";
 import { useTranslation } from "react-i18next";

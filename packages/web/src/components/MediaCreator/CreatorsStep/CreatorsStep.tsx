@@ -13,8 +13,8 @@ import {
   RecordStatus,
   useDataLoader,
   UserInAssetRoles,
+  IUsersInAssetListModel,
 } from "@xala/common";
-import { IUsersInAssetListModel } from "@xala/common/src/providers/DataProvider/Internal/models";
 import useForm from "rc-field-form/lib/useForm";
 import React, { useContext, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";

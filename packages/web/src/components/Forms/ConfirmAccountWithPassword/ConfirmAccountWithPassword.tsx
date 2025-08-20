@@ -15,8 +15,8 @@ import {
   IUserDeviceModel,
   updateApiErrors,
   UrlHelper,
+  IAuthState,
 } from "@xala/common";
-import { IAuthState } from "@xala/common/src/store/auth/types";
 import React from "react";
 import { WithTranslation } from "react-i18next";
 import { RouteComponentProps } from "react-router";
