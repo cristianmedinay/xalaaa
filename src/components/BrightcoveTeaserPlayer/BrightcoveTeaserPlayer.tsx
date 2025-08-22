@@ -48,8 +48,8 @@ const BrightcoveTeaserPlayerRaw = (props: IBrightcovePlayerProps) => {
     media: { ...media, MediaStreamType: MediaStreamType.Promo },
   });
 
-  const accountId = import.meta.env.VITE_BRIGHTCOVE_ACCOUNT_ID;
-  const playerId = import.meta.env.VITE_BRIGHTCOVE_PLAYER_ID;
+  const accountId = process.env.REACT_APP_BRIGHTCOVE_ACCOUNT_ID;
+  const playerId = process.env.REACT_APP_BRIGHTCOVE_PLAYER_ID;
 
   const highlightsImageUrl =
     ImageHelper.getHighlightsImageUrl(media?.Images) ||

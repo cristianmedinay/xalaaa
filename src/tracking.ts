@@ -8,13 +8,13 @@ import ReactGA from "react-ga";
 
 import { firebaseAnalytics } from "@xala/common";
 
-const trackingId = import.meta.env.VITE_GA_TRACKING_ID;
+const trackingId = process.env.REACT_APP_GA_TRACKING_ID;
 const trackingEnabled = trackingId !== undefined && trackingId.length > 0;
 
 export const initGA = () => {
   if (trackingEnabled) {
     ReactGA.initialize(trackingId as string, {
-      debug: import.meta.env.DEV,
+      debug: process.env.NODE_ENV === "development",
       titleCase: false,
     });
   }

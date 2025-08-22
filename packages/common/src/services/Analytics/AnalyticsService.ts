@@ -17,7 +17,7 @@ export class AnalyticsService {
     new Observable((observer: Observer<null>) => {
       return new AxiosSubscriber(observer, {
         baseURL:
-          (import.meta.env.VITE_KONODRAC_ANALYTICS_URL as string) ||
+          (process.env.REACT_APP_KONODRAC_ANALYTICS_URL as string) ||
           AppConfig.KonodracUrl,
         data,
         method: HTTP_METHOD.POST,

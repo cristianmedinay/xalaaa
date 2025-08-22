@@ -21,8 +21,8 @@ export const HORIZONTAL = "HORIZONTAL";
 export const VERTICAL = "VERTICAL";
 export const ENTER_UP = "EnterUp";
 
-const showMyList = import.meta.env.VITE_MY_LIST_NAVIGATION === "true";
-const showMyOrders = import.meta.env.VITE_MY_ORDERS_NAVIGATION === "true";
+const showMyList = process.env.REACT_APP_MY_LIST_NAVIGATION === "true";
+const showMyOrders = process.env.REACT_APP_MY_ORDERS_NAVIGATION === "true";
 
 export const userApplicationMenuItems = (
   t: TFunction,
