@@ -28,7 +28,7 @@ export class DeviceHelper {
 
     const firebaseToken = await StorageManager.getValue("firebaseTokenFCM");
 
-    info.FirebaseToken = firebaseToken || import.meta.env.VITE_FIREBASE_TOKEN;
+    info.FirebaseToken = firebaseToken || process.env.REACT_APP_FIREBASE_TOKEN;
 
     return info as IUserDeviceModel;
   };

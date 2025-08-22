@@ -18,8 +18,8 @@ interface DecryptedCleengPayload {
   CleengUserID: string;
 }
 
-const PASSKEY = import.meta.env.VITE_CLEENG_USER_REGISTRATION_PASSKEY || "";
-const IV = import.meta.env.VITE_CLEENG_USER_REGISTRATION_IV || "";
+const PASSKEY = process.env.REACT_APP_CLEENG_USER_REGISTRATION_PASSKEY || "";
+const IV = process.env.REACT_APP_CLEENG_USER_REGISTRATION_IV || "";
 
 export const useEncryptedRegisterHash = (
   params: useEncryptedRegisterHashParams
